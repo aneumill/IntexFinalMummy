@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IntexFinalMummy.Models.ViewModels.IndexViewModel
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container text-center">
+
+        <div class=" container text-center">
+            <div>
+                <h1> Mummy Database</h1>
+            </div>
+
+
+            <div>
+                  <form method="get">
+                      <partial name="FilterSummary" model="Model.SearchModel"/>
+                  </form>
+             </div>
+
+            <div>
+
+                <partial name="PaginationSummary" />
+
+            </div>
+            <table class="table table-dark table-striped ">
+                <thead>
+                    <tr>
+                        <th>View Record</th>
+                        <th>MummyID</th>
+                        <th>Sex</th>
+                        <th>Minimum Age of Remains</th>
+                        <th>Maximum Age of Remains</th>
+                        <th>Hair Color</th>
+                        <th>Burial Depth</th>
+                        <th>Burial Goods</th>
+                        <th>Burial Description</th>
+
+
+                </thead>
+                <tbody>
+
+
+                    @foreach (var x in Model.MummyInfos)
+
+                    {
+
+                        //See the MyMovieSummary file for the partial view
+                        <partial name="EntrySummary" model="x" />
+                    }
+
+
+
+
+                </tbody>
+
+            </table>
+        </div>
+      <br /><br /><br />
+    </div>

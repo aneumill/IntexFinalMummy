@@ -1,0 +1,32 @@
+﻿@model IntexFinalMummy.Models.Filters.SearchModel
+
+<form class="d-inline"method="get">
+    <label asp-for="Gender">Gender</label>
+    <select asp-for="Gender">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="U">Unknown</option>
+        <option value="S">Sub Adult</option>
+    </select>
+    <label asp-for="MinAge"></label>
+    <input asp-for="MinAge" />
+    <label asp-for="MaxAge"></label>
+    <input asp-for="MaxAge" />
+    @*<select asp-for="Artifacts">Artifacts 
+        <option value="True">No Artifacts</option>
+        <option value="False">Has Artifacts</option>
+    </select>*@
+    <label asp-for="HeadDirection">Head Direction</label>
+    @*<select asp-for="HeadDirection">
+        <option value="N">North</option>
+        <option value="E">East</option>
+        <option value="S">South</option>
+        <option value="W">West</option>
+    </select>*@
+    <label asp-for="YearDiscovered">Year Discovered</label>
+    <input asp-for=" YearDiscovered"/>
+
+    <label asp-for="BurialDepth">Burial Depth</label>
+    <input asp-for="BurialDepth" />
+    <button class="btn btn-dark "type="submit"> Submit</button>
+</form>

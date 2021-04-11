@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using IntexFinalMummy.Models.ViewModels;
+using IntexFinalMummy.Models.Filters;
 
 namespace IntexFinalMummy.Controllers
 {
@@ -15,6 +16,8 @@ namespace IntexFinalMummy.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private IntexMummyVaultContext _context { get; set; }
+
+        private int pageSize = 25;
  
         public HomeController(ILogger<HomeController> logger, IntexMummyVaultContext con)
         {
@@ -27,11 +30,35 @@ namespace IntexFinalMummy.Controllers
             return View();
         }
 
-        public IActionResult ViewRecords()
+        [HttpGet]
+        public IActionResult ViewRecords(SearchModel? searchmodel, int PageNum = 1)
         {
+            var LogicForSearch = new SearchLogic(_context);
+            var mummyqueryable = LogicForSearch.GetRecords(searchmodel);
+
             return View(new IndexViewModel
             {
-                MummyInfos = _context.MummyInfos
+                MummyInfos = (mummyqueryable
+                    .Skip((PageNum - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList()),
+
+
+
+                PageNumberingInfo = new PageNumberingInfo
+                {
+                    NumItemsPerPage = pageSize,
+                    CurrentPage = PageNum,
+                    TotalNumItems = (mummyqueryable.Count())
+                },
+
+
+
+                SearchModel = searchmodel,
+
+
+
+                InfoFromUrl = Request.QueryString.Value
 
             });
 

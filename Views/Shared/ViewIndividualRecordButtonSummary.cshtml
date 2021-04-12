@@ -1,0 +1,188 @@
+﻿
+@model IntexFinalMummy.Models.MummyInfo 
+
+<td>
+    <form id="@Model.MummyId" asp-action="ViewIndividualRecord" method="get">
+
+        <span class="card-text p1">
+
+            <button class="btn btn-info" type="submit">View Full Record</button>
+
+            <input asp-for="MummyId" type="hidden" value="@Model.MummyId" />
+
+            <input type="hidden" asp-for="BurialNumber" />
+
+            <input type="hidden" asp-for="AdultChild" />
+
+            <input type="hidden" asp-for="Sex" />
+
+            <input type="hidden" asp-for="SexMethod" />
+
+            <input type="hidden" asp-for="MinAge" />
+
+            <input type="hidden" asp-for="MaxAge" />
+
+            <input type="hidden" asp-for="HairColor" />
+
+            <input type="hidden" asp-for="Sample" />
+
+            <input type="hidden" asp-for="YearDiscovered" />
+
+            <input type="hidden" asp-for="MonthDiscovered" />
+
+            <input type="hidden" asp-for="DayDiscovered" />
+
+            <input type="hidden" asp-for="Artifacts" />
+
+            <input type="hidden" asp-for="ArtifactsDescription" />
+
+            <input type="hidden" asp-for="HairTaken" />
+
+            <input type="hidden" asp-for="SoftTissueTaken" />
+
+            <input type="hidden" asp-for="BoneTaken" />
+
+            <input type="hidden" asp-for="ToothTaken" />
+
+            <input type="hidden" asp-for="TextileTaken" />
+
+            <input type="hidden" asp-for="MummyDescription" />
+
+            <input type="hidden" asp-for="BurialDepth" />
+
+            <input type="hidden" asp-for="ExtractedOrder" />
+
+            <input type="hidden" asp-for="SkullYear" />
+
+            <input type="hidden" asp-for="SkullMonth" />
+
+            <input type="hidden" asp-for="SkullDay" />
+
+            <input type="hidden" asp-for="SouthToHead" />
+
+            <input type="hidden" asp-for="SouthToFeet" />
+
+            <input type="hidden" asp-for="WestToHead" />
+
+            <input type="hidden" asp-for="WestToFeet" />
+
+            <input type="hidden" asp-for="HeadDirection" />
+
+            <input type="hidden" asp-for="FieldBookYear" />
+
+            <input type="hidden" asp-for="FieldBookPageNum" />
+
+            <input type="hidden" asp-for="PreservationDescription" />
+
+            <input type="hidden" asp-for="PreviouslySampled" />
+
+            <input type="hidden" asp-for="BurialSituationNotes" />
+
+            <input type="hidden" asp-for="LengthOfRemains" />
+
+            <input type="hidden" asp-for="GefunctionTotal" />
+
+            <input type="hidden" asp-for="SexGe" />
+
+            <input type="hidden" asp-for="VentralArc" />
+
+            <input type="hidden" asp-for="SubponicAngle" />
+
+            <input type="hidden" asp-for="SciaticNotch" />
+
+            <input type="hidden" asp-for="PubicBone" />
+
+            <input type="hidden" asp-for="PreaurSulcus" />
+
+            <input type="hidden" asp-for="MedialIpramus" />
+
+            <input type="hidden" asp-for="DorsalPitting" />
+
+            <input type="hidden" asp-for="FormanMagnum" />
+
+            <input type="hidden" asp-for="FemurHead" />
+
+            <input type="hidden" asp-for="HumerusHead" />
+
+            <input type="hidden" asp-for="Osteophystosis" />
+
+            <input type="hidden" asp-for="PubicSymphysis" />
+
+            <input type="hidden" asp-for="FemurLength" />
+
+            <input type="hidden" asp-for="HumerusLength" />
+
+            <input type="hidden" asp-for="TibiaLength" />
+
+            <input type="hidden" asp-for="Robust" />
+
+            <input type="hidden" asp-for="SupraorbitalRidges" />
+
+            <input type="hidden" asp-for="OrbitEdge" />
+
+            <input type="hidden" asp-for="ParietalBossing" />
+
+            <input type="hidden" asp-for="Gonian" />
+
+            <input type="hidden" asp-for="NuchalCrest" />
+
+            <input type="hidden" asp-for="ZygomaticCrest" />
+
+            <input type="hidden" asp-for="CranialSuture" />
+
+            <input type="hidden" asp-for="EstLivingStature" />
+
+            <input type="hidden" asp-for="ToothAttrition" />
+
+            <input type="hidden" asp-for="ToothEruption" />
+
+            <input type="hidden" asp-for="PathalogyAnomaly" />
+
+            <input type="hidden" asp-for="EpiphysealUnion" />
+
+            <input type="hidden" asp-for="ByuSample" />
+
+            <input type="hidden" asp-for="ToBeConfirmed" />
+
+            <input type="hidden" asp-for="SkullTrauma" />
+
+            <input type="hidden" asp-for="PostcraniaTrauma" />
+
+            <input type="hidden" asp-for="CibraOrbitala" />
+
+            <input type="hidden" asp-for="PoroticHyperostosis" />
+
+            <input type="hidden" asp-for="PoroticHyperostosisLocations" />
+
+            <input type="hidden" asp-for="MetopicSuture" />
+
+            <input type="hidden" asp-for="ButtonOsteoma" />
+
+            <input type="hidden" asp-for="OsteologyUnknownComment" />
+
+            <input type="hidden" asp-for="TemporalMandibularJointOsteoarthritis" />
+
+            <input type="hidden" asp-for="LinearHypoplasiaEnamel" />
+
+            <input type="hidden" asp-for="Area" />
+
+            <input type="hidden" asp-for="Tomb" />
+
+            <input type="hidden" asp-for="FaceBundle" />
+
+            <input type="hidden" asp-for="BodyAnalysisYear" />
+
+            <input type="hidden" asp-for="SkullAtMagazine" />
+
+            <input type="hidden" asp-for="PostcraniaAtMagazine" />
+
+            <input type="hidden" asp-for="DataEntryExpert" />
+
+            <input type="hidden" asp-for="DataEntryChecker" />
+
+            <input type="hidden" asp-for="OsteologyNotes" />
+
+        </span>
+
+    </form>
+</td>

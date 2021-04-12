@@ -18,7 +18,7 @@ namespace IntexFinalMummy.Controllers
         private IntexMummyVaultContext _context { get; set; }
 
         private int pageSize = 25;
- 
+
         public HomeController(ILogger<HomeController> logger, IntexMummyVaultContext con)
         {
             _logger = logger;
@@ -63,6 +63,18 @@ namespace IntexFinalMummy.Controllers
             });
 
         }
+        [HttpGet]
+        public IActionResult ViewIndividualRecord(long MummyID)
+            {
+            return View(new IndexViewModel
+            {
+                MummyInfos = _context.MummyInfos
+                .Where(x => x.MummyId == MummyID )
+
+            }   
+                );
+            }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

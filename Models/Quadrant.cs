@@ -13,6 +13,7 @@ namespace IntexFinalMummy.Models
             MummyInfos = new HashSet<MummyInfo>();
         }
 
+        
         public int QuadrantId { get; set; }
         public int? SquareId { get; set; }
         public string QuadrantDirection { get; set; }

@@ -8,21 +8,21 @@ namespace IntexFinalMummy.Models.ViewModels
 {
     public class EditRecordViewModel
     {
-        public MummyInfo MummyInfos { get; set; }
+        public MummyInfo? MummyInfos { get; set; }
 
-        public C14sample C14Sample { get; set; }
-        public Cluster Cluster { get; set; }
-        public CraniumSample CraniumSample { get; set; }
-        public Square Square { get; set; }
+        public C14sample? C14Sample { get; set; }
+        public Cluster? Cluster { get; set; }
+        public CraniumSample? CraniumSample { get; set; }
+        public Square? Square { get; set; }
 
-        public Sample Samples {get;set;}
+        public Sample? Samples {get;set;}
 
-        public Quadrant Quadrants { get; set; }
+        public Quadrant? Quadrants { get; set; }
 
         public string InfoFromUrl { get; set; }
-        public PageNumberingInfo PageNumberingInfo { get; set; }
+        public PageNumberingInfo? PageNumberingInfo { get; set; }
         
-        public SearchModel SearchModel { get; set; }
+        public SearchModel? SearchModel { get; set; }
     }
 
 }

@@ -13,9 +13,9 @@ namespace IntexFinalMummy.Models
             CraniumSamples = new HashSet<CraniumSample>();
             Samples = new HashSet<Sample>();
         }
-
-        public int MummyId { get; set; }
-        public int QuadrantId { get; set; }
+        
+        public int? MummyId { get; set; }
+        public int? QuadrantId { get; set; }
         public int? ClusterId { get; set; }
         public int? BurialNumber { get; set; }
         public bool? AdultChild { get; set; }

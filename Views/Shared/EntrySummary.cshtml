@@ -8,14 +8,16 @@
 @model IntexFinalMummy.Models.MummyInfo
 
 
+
+
 <tr>
-    <td>@Model.MummyId </td>
-    <td>@Model.Sex</td>
-    <td>@Model.MinAge</td>
-    <td>@Model.MaxAge</td>
-    <td>@Model.HairColor</td>
-    <td>@Model.BurialDepth</td>
-    <td>@Model.ArtifactsDescription</td>
-    <td>@Model.MummyDescription</td>
-    <partial name="ViewIndividualRecordButtonSummary"  />
+    <td class="cell100 column1">@Model.MummyId </td>
+    <td class="cell100 column2">@Model.Sex</td>
+    <td class="cell100 column3">@Model.MinAge</td>
+    <td class="cell100 column4">@Model.MaxAge</td>
+    <td class="cell100 column5">@Model.HairColor</td>
+    <td class="cell100 column6">@Model.BurialDepth</td>
+    <td class="cell100 column7">@Model.ArtifactsDescription</td>
+    <td class="cell100 column8">@Model.MummyDescription</td>
+    <partial name="ViewIndividualRecordButtonSummary" />
 </tr>

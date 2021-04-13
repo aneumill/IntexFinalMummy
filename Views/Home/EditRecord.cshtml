@@ -7,11 +7,9 @@
                 <partial name="TitleSummary" model="Model.MummyInfos" />
 
             </div>
-            <form asp-action="EditRecord" method="post">
-                @*<div>
-            <partial name="EditPostButton" model="Model.MummyInfos" />
-        </div>*@
-                <td>
+            <form class="justify-content-center" asp-action="EditRecord" method="post">
+               
+            
 
 
                     <span class="card-text">
@@ -25,10 +23,10 @@
 
                     </span>
 
-                </td>
+               
 
 
-                <div class="row justify-content-center text-dark text-center font-weight-bold">
+                <div class="row justify-content-center text-dark text-center">
                     <div class="col-3">
                         <h3>Information About the Mummy</h3>
 
@@ -918,7 +916,7 @@
 
                             <div>
 
-                                <label asp-for="CraniumSample.GilesSex">GilesSex</label>
+                                <label asp-for="CraniumSample.GilesSex">GilesSex</label><br />
 
                                 <input asp-for="CraniumSample.GilesSex">
 
@@ -1115,7 +1113,7 @@
 
                             <div>
 
-                                <label asp-for="C14Sample.Category">Category</label>
+                                <label asp-for="C14Sample.Category">Category</label><br />
 
                                 <input asp-for="C14Sample.Category" />
 
@@ -1123,7 +1121,7 @@
 
                             <div>
 
-                                <label asp-for="C14Sample.Lab">Lab</label>
+                                <label asp-for="C14Sample.Lab">Lab</label><br />
 
                                 <input asp-for="C14Sample.Lab" />
 

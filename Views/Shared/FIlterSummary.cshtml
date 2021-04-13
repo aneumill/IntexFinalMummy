@@ -1,30 +1,62 @@
-﻿@model IntexFinalMummy.Models.Filters.SearchModel
+﻿
+@model IntexFinalMummy.Models.Filters.SearchModel
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<form class="align-middle" method="get">
 
-<form class="d-inline"method="get">
-    <label asp-for="Gender">Gender</label>
-    <select asp-for="Gender">
-        <option value="M">Male</option>
-        <option value="F">Female</option>
-        <option value="U">Unknown</option>
-        <option value="S">Sub Adult</option>
-    </select>
-    <label asp-for="MinAge"></label>
-    <input asp-for="MinAge" />
-    <label asp-for="MaxAge"></label>
-    <input asp-for="MaxAge" />
-    <select asp-for="Artifacts">Artifacts 
-        <option value="0">No Artifacts</option>
-        <option value="1">Has Artifacts</option>
-    </select>
-    <label asp-for="HeadDirection">Head Direction</label>
-    *<select asp-for="HeadDirection">
-        <option value="E">East</option>
-        <option value="W">West</option>
-    </select>*
-    <label asp-for="YearDiscovered">Year Discovered</label>
-    <input asp-for=" YearDiscovered"/>
 
-    <label asp-for="BurialDepth">Burial Depth</label>
-    <input asp-for="BurialDepth" />
-    <button class="btn btn-dark "type="submit"> Submit</button>
+
+    <div class="d-inline">
+        <div class="d-inline-flex d-grid">
+            <label class="font-weight-bold" style="padding: 10px" asp-for="Gender">Gender:</label>
+            <select class="form-control" asp-for="Gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="U">Unknown</option>
+                <option value="S">Sub Adult</option>
+            </select>
+
+
+
+            <label class="form-group font-weight-bold" style="padding: 10px" asp-for="MinAge"></label>
+            <input class="form-control" asp-for="MinAge" />
+
+
+
+            <label class="font-weight-bold" style="padding: 10px" asp-for="MaxAge"></label>
+            <input class="form-control" asp-for="MaxAge" />
+        </div>
+    </div>
+
+
+
+    <div class="d-inline">
+        <div class="d-inline-flex d-grid">
+            <label class="font-weight-bold" style="padding: 10px" asp-for="Artifacts"></label>
+            <select class="form-control" asp-for="Artifacts">
+                Select
+                <option value="False">No Artifacts</option>
+                <option value="True">Has Artifacts</option>
+            </select>
+
+            <label class="font-weight-bold" style="padding: 10px" asp-for="YearDiscovered">Year Discovered:</label>
+            <input class="form-control" style="border-color: dimgrey; border-width: 10px" asp-for=" YearDiscovered" />
+
+
+
+            <label class="font-weight-bold" style="padding: 10px" asp-for="BurialDepth">Burial Depth:</label>
+            <input class="form-control" asp-for="BurialDepth" />
+            <label class="font-weight-bold" style="padding: 10px;" asp-for="HeadDirection">Head Direction:</label>
+            <select class="form-control" asp-for="HeadDirection">
+                Select
+                <option value="E">East</option>
+                <option value="W">West</option>
+            </select>
+        </div>
+    </div>
+    <div class="d-inline">
+        <button class="btn btn-dark justify-content-md-center d-inline-flex" type="submit"> Submit</button>
+    </div>
+    <div class="d-inline">
+        <a class="btn btn-dark justify-content-md-center d-inline-flex" asp-controller="Home" asp-action="ViewRecords">Clear Selection</a>
+    </div>
 </form>

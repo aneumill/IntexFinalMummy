@@ -32,6 +32,7 @@ namespace IntexFinalMummy.Controllers
             _logger = logger;
             _context = con;
         }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -173,6 +174,13 @@ namespace IntexFinalMummy.Controllers
 
  
 
+      
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
         [HttpGet]
         public IActionResult EditRecord(long MummyID, long QuadrantID, long ClusterID)
         {
@@ -213,7 +221,7 @@ namespace IntexFinalMummy.Controllers
             {
                 mummySampleData = x;
             }
-            
+
             foreach (var x in queryableQuadrants)
             {
                 mummyQuadrantData = x;
@@ -243,7 +251,7 @@ namespace IntexFinalMummy.Controllers
 
             return View(new EditRecordViewModel
             {
-             
+
                 MummyInfos = mummyInfoData,
                 Samples = mummySampleData,
                 Quadrants = mummyQuadrantData,
@@ -258,24 +266,7 @@ namespace IntexFinalMummy.Controllers
             });
         }
 
-        //[HttpPost]
-        //public IActionResult EditRecord(EditRecordViewModel formsubmission)
-        //{
-            
-        //    _context.MummyInfos.Update(formsubmission.MummyInfos);
-        //    _context.Clusters.Update(formsubmission.Cluster);
-        //    _context.Quadrants.Update(formsubmission.Quadrants);
-        //    _context.Samples.Update(formsubmission.Samples);
-        //    _context.C14samples.Update(formsubmission.C14Sample);
-        //    _context.CraniumSamples.Update(formsubmission.CraniumSample);
-        //    _context.Squares.Update(formsubmission.Square);
 
-            
-        //    _context.SaveChanges();
-
-
-        //    return View("EditConfirmation", formsubmission.MummyInfos);
-        //  }
         [HttpPost]
         public IActionResult EditRecord(EditRecordViewModel formsubmission)
         {
@@ -393,7 +384,7 @@ namespace IntexFinalMummy.Controllers
                 x.DataEntryExpert = formsubmission.MummyInfos.DataEntryExpert;
                 x.DataEntryChecker = formsubmission.MummyInfos.DataEntryChecker;
                 x.OsteologyNotes = formsubmission.MummyInfos.OsteologyNotes;
-               
+
             }
             _context.SaveChanges();
 
@@ -406,22 +397,22 @@ namespace IntexFinalMummy.Controllers
                 x.BagNum = formsubmission.Samples.BagNum;
                 x.RackNumByu = formsubmission.Samples.RackNumByu;
                 x.Initial = formsubmission.Samples.Initial;
-    }
-           
+            }
+
             foreach (var x in queryableQuadrants)
             {
                 x.QuadrantId = formsubmission.Quadrants.QuadrantId;
                 x.SquareId = formsubmission.Quadrants.SquareId;
                 x.QuadrantDirection = formsubmission.Quadrants.QuadrantDirection;
-    }
-           
+            }
+
             foreach (var x in queryableClusters)
             {
                 x.ClusterId = formsubmission.Cluster.ClusterId;
                 x.QuadrantId = formsubmission.Cluster.QuadrantId;
                 x.ClusterNum = formsubmission.Cluster.ClusterNum;
-    }
-            
+            }
+
             foreach (var x in queryableCranium)
             {
                 x.CraniumSampleId = formsubmission.CraniumSample.CraniumSampleId;
@@ -438,7 +429,7 @@ namespace IntexFinalMummy.Controllers
                 x.ShelfNum = formsubmission.CraniumSample.ShelfNum;
                 x.RackNumEgypt = formsubmission.CraniumSample.RackNumEgypt;
                 x.GilesSex = formsubmission.CraniumSample.GilesSex;
-    }
+            }
 
             foreach (var x in queryableSquare)
             {
@@ -449,8 +440,8 @@ namespace IntexFinalMummy.Controllers
                 x.LowEw = formsubmission.Square.LowEw;
                 x.HighEw = formsubmission.Square.HighEw;
                 x.EW = formsubmission.Square.EW;
-    }
-            
+            }
+
             foreach (var x in queryableC14)
             {
                 //x.C14sampleId = formsubmission.C14Sample.C14sampleId;
@@ -473,16 +464,13 @@ namespace IntexFinalMummy.Controllers
             }
 
 
-            
+
 
 
             return View("EditConfirmation", formsubmission.MummyInfos);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
+
+
 }

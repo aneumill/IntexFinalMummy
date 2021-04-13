@@ -1,0 +1,10 @@
+﻿@model IntexFinalMummy.Models.MummyInfo
+
+   <td>
+    <form id="@Model.MummyId" asp-action="DeleteRecord" method="post">
+        <span class="card-text p1">
+            <button class="btn btn-danger" type="submit">Delete</button>
+            <input type="hidden" asp-for="MummyId" />
+        </span>
+    </form>
+</td>

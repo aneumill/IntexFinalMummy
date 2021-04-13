@@ -68,9 +68,9 @@ namespace IntexFinalMummy.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteRecord(EditRecordViewModel passedMummy)
+        public IActionResult DeleteRecord(MummyInfo passedMummyID)
         {
-            IQueryable<MummyInfo> removingRecord = _context.MummyInfos.Where(p => p.MummyId == passedMummy.MummyInfos.MummyId);
+            IQueryable<MummyInfo> removingRecord = _context.MummyInfos.Where(p => p.MummyId == passedMummyID.MummyId);
 
             //loop to remove the record in the database
             foreach (var x in removingRecord)
@@ -80,7 +80,7 @@ namespace IntexFinalMummy.Controllers
 
             _context.SaveChanges();
 
-            return View("DeleteConfirmation", passedMummy);
+            return View("DeleteConfirmation");
         }
 
         [HttpGet]

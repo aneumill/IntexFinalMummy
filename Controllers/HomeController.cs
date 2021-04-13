@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using IntexFinalMummy.Models.ViewModels;
 using IntexFinalMummy.Models.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IntexFinalMummy.Controllers
 {
@@ -39,12 +40,15 @@ namespace IntexFinalMummy.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "User/Admin")]
         public IActionResult AddRecord()
         {
             return View();
         }
-
+        
+     
         [HttpPost]
+        [Authorize(Policy="User/Admin")]
         public IActionResult AddRecord(MummyInfo newRecord)
         {
             if (newRecord.QuadrantId == null)
@@ -66,8 +70,9 @@ namespace IntexFinalMummy.Controllers
             }
 
         }
-
+        
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteRecord(MummyInfo passedMummyID)
         {
             IQueryable<MummyInfo> removingRecord = _context.MummyInfos.Where(p => p.MummyId == passedMummyID.MummyId);
@@ -225,7 +230,8 @@ namespace IntexFinalMummy.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-          [HttpGet]
+        [HttpGet]
+        [Authorize(Policy = "User/Admin")]
         public IActionResult EditRecord(long MummyID, long QuadrantID, long ClusterID)
         {
             int? compareId = 0;
@@ -312,6 +318,7 @@ namespace IntexFinalMummy.Controllers
 
      
         [HttpPost]
+        [Authorize(Policy = "User/Admin")]
         public IActionResult EditRecord(EditRecordViewModel formsubmission)
         {
 

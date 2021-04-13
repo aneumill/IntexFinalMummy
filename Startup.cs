@@ -43,10 +43,10 @@ namespace IntexFinalMummy
                   Configuration.GetConnectionString("MummyConnection")));
 
             services.AddAuthorization(options => {
-                options.AddPolicy("readpolicy",
-                    builder => builder.RequireRole("Admin", "Manager", "User"));
-                options.AddPolicy("writepolicy",
-                    builder => builder.RequireRole("Admin", "Manager"));
+                options.AddPolicy("User/Admin",
+                    builder => builder.RequireRole("Admin", "User"));
+                options.AddPolicy("ReadOnly",
+                    builder => builder.RequireRole("Admin", "User","Unassigned"));
             });
             services.AddControllersWithViews();
         }

@@ -1,1135 +1,1137 @@
 ﻿@model IntexFinalMummy.Models.ViewModels.EditRecordViewModel
 
 
-<br /><br /><br />
-            <div class="text-center">
+<br />
+<br />
+<br />
+<div class="text-center">
 
-                <partial name="TitleSummary" model="Model.MummyInfos" />
+    <partial name="TitleSummary" model="Model.MummyInfos" />
+
+</div>
+<form class="" asp-action="EditRecord" method="post">
+
+
+
+
+    <span class="card-text">
+        
+            <button class="btn justify-content-center btn-success" type="submit">Edit Record</button>
+        
+        <input asp-for="MummyInfos.MummyId" type="hidden" value="@Model.MummyInfos.MummyId" />
+        <input asp-for="MummyInfos.QuadrantId" type="hidden" value="@Model.MummyInfos.QuadrantId" />
+        <input asp-for="MummyInfos.ClusterId" type="hidden" value="@Model.MummyInfos.ClusterId" />
+
+
+    </span>
+
+
+
+
+    <div class="row justify-content-center text-dark text-center">
+        <div class="col-3">
+            <h3>Information About the Mummy</h3>
+
+            @*<partial name="EditMummyInfo1" model="Model.MummyInfos" />*@
+
+            <div class="container">
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.BurialNumber">BurialNumber</label> <br />
+
+                    <input asp-for="@Model.MummyInfos.BurialNumber" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="MummyInfos.AdultChild">AdultChild</label><br />
+
+                    <input asp-for="MummyInfos.AdultChild" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Sex">Sex</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Sex" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SexMethod">SexMethod</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SexMethod" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.MinAge">MinAge</label><br />
+
+                    <input asp-for="@Model.MummyInfos.MinAge" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.MaxAge">MaxAge</label><br />
+
+                    <input asp-for="@Model.MummyInfos.MaxAge" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.HairColor">HairColor</label><br />
+
+                    <input asp-for="@Model.MummyInfos.HairColor" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Sample">Sample</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Sample" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.YearDiscovered">YearDiscovered</label><br />
+
+                    <input asp-for="@Model.MummyInfos.YearDiscovered" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.MonthDiscovered">MonthDiscovered</label><br />
+
+                    <input asp-for="@Model.MummyInfos.MonthDiscovered" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.DayDiscovered">DayDiscovered</label><br />
+
+                    <input asp-for="@Model.MummyInfos.DayDiscovered" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Artifacts">Artifacts</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Artifacts" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.ArtifactsDescription">ArtifactsDescription</label><br />
+
+                    <input asp-for="@Model.MummyInfos.ArtifactsDescription" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.HairTaken">HairTaken</label><br />
+
+                    <input asp-for="@Model.MummyInfos.HairTaken" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SoftTissueTaken">SoftTissueTaken</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SoftTissueTaken" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.BoneTaken">BoneTaken</label><br />
+
+                    <input asp-for="@Model.MummyInfos.BoneTaken" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.ToothTaken">ToothTaken</label><br />
+
+                    <input asp-for="@Model.MummyInfos.ToothTaken" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.TextileTaken">TextileTaken</label><br />
+
+                    <input asp-for="@Model.MummyInfos.TextileTaken" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.MummyDescription">MummyDescription</label><br />
+
+                    <input asp-for="@Model.MummyInfos.MummyDescription" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.BurialDepth">BurialDepth</label><br />
+
+                    <input asp-for="@Model.MummyInfos.BurialDepth" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.ExtractedOrder">ExtractedOrder</label><br />
+
+                    <input asp-for="@Model.MummyInfos.ExtractedOrder" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SkullYear">SkullYear</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SkullYear" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SkullMonth">SkullMonth</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SkullMonth" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SkullDay">SkullDay</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SkullDay" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SouthToHead">SouthToHead</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SouthToHead" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SouthToFeet">SouthToFeet</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SouthToFeet" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.WestToHead">WestToHead</label><br />
+
+                    <input asp-for="@Model.MummyInfos.WestToHead" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.WestToFeet">WestToFeet</label><br />
+
+                    <input asp-for="@Model.MummyInfos.WestToFeet" />
+
+                </div>
+
 
             </div>
-            <form class="" asp-action="EditRecord" method="post">
-               
-            
 
 
-                    <span class="card-text">
 
-                        <button class="btn justify-content-center btn-success" type="submit">Edit Record</button>
-
-                        <input asp-for="MummyInfos.MummyId" type="hidden" value="@Model.MummyInfos.MummyId" />
-                        <input asp-for="MummyInfos.QuadrantId" type="hidden" value="@Model.MummyInfos.QuadrantId" />
-                        <input asp-for="MummyInfos.ClusterId" type="hidden" value="@Model.MummyInfos.ClusterId" />
-
-
-                    </span>
-
-               
-
-
-                <div class="row justify-content-center text-dark text-center">
-                    <div class="col-3">
-                        <h3>Information About the Mummy</h3>
-
-                        @*<partial name="EditMummyInfo1" model="Model.MummyInfos" />*@
-
-                    <div class="container">
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.BurialNumber">BurialNumber</label> <br />
-
-                            <input asp-for="@Model.MummyInfos.BurialNumber" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="MummyInfos.AdultChild">AdultChild</label><br />
-
-                            <input asp-for="MummyInfos.AdultChild" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.Sex">Sex</label><br />
-
-                            <input asp-for="@Model.MummyInfos.Sex" />
-
-                        </div>
-
-                        <div>
-
-            <label asp-for="@Model.MummyInfos.SexMethod">SexMethod</label><br />
-
-            <input asp-for="@Model.MummyInfos.SexMethod" />
 
         </div>
+        <div class="col-3">
+            <h3>Information About the Mummy</h3>
 
-        <div>
 
-            <label asp-for="@Model.MummyInfos.MinAge">MinAge</label><br />
 
-            <input asp-for="@Model.MummyInfos.MinAge" />
+            <div>
 
-        </div>
+                <div>
 
-        <div>
+                    <label asp-for="@Model.MummyInfos.HeadDirection">HeadDirection</label><br />
 
-            <label asp-for="@Model.MummyInfos.MaxAge">MaxAge</label><br />
+                    <input asp-for="@Model.MummyInfos.HeadDirection" />
 
-            <input asp-for="@Model.MummyInfos.MaxAge" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.HairColor">HairColor</label><br />
-
-            <input asp-for="@Model.MummyInfos.HairColor" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.Sample">Sample</label><br />
-
-            <input asp-for="@Model.MummyInfos.Sample" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.YearDiscovered">YearDiscovered</label><br />
-
-            <input asp-for="@Model.MummyInfos.YearDiscovered" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.MonthDiscovered">MonthDiscovered</label><br />
-
-            <input asp-for="@Model.MummyInfos.MonthDiscovered" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.DayDiscovered">DayDiscovered</label><br />
-
-            <input asp-for="@Model.MummyInfos.DayDiscovered" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.Artifacts">Artifacts</label><br />
-
-            <input asp-for="@Model.MummyInfos.Artifacts" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.ArtifactsDescription">ArtifactsDescription</label><br />
-
-            <input asp-for="@Model.MummyInfos.ArtifactsDescription" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.HairTaken">HairTaken</label><br />
-
-            <input asp-for="@Model.MummyInfos.HairTaken" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SoftTissueTaken">SoftTissueTaken</label><br />
-
-            <input asp-for="@Model.MummyInfos.SoftTissueTaken" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.BoneTaken">BoneTaken</label><br />
-
-            <input asp-for="@Model.MummyInfos.BoneTaken" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.ToothTaken">ToothTaken</label><br />
-
-            <input asp-for="@Model.MummyInfos.ToothTaken" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.TextileTaken">TextileTaken</label><br />
-
-            <input asp-for="@Model.MummyInfos.TextileTaken" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.MummyDescription">MummyDescription</label><br />
-
-            <input asp-for="@Model.MummyInfos.MummyDescription" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.BurialDepth">BurialDepth</label><br />
-
-            <input asp-for="@Model.MummyInfos.BurialDepth" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.ExtractedOrder">ExtractedOrder</label><br />
-
-            <input asp-for="@Model.MummyInfos.ExtractedOrder" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SkullYear">SkullYear</label><br />
-
-            <input asp-for="@Model.MummyInfos.SkullYear" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SkullMonth">SkullMonth</label><br />
-
-            <input asp-for="@Model.MummyInfos.SkullMonth" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SkullDay">SkullDay</label><br />
-
-            <input asp-for="@Model.MummyInfos.SkullDay" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SouthToHead">SouthToHead</label><br />
-
-            <input asp-for="@Model.MummyInfos.SouthToHead" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.SouthToFeet">SouthToFeet</label><br />
-
-            <input asp-for="@Model.MummyInfos.SouthToFeet" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.WestToHead">WestToHead</label><br />
-
-            <input asp-for="@Model.MummyInfos.WestToHead" />
-
-        </div>
-
-        <div>
-
-            <label asp-for="@Model.MummyInfos.WestToFeet">WestToFeet</label><br />
-
-            <input asp-for="@Model.MummyInfos.WestToFeet" />
-
-        </div>
-
-
-      </div>
-
-
-
-
-       </div>
-                    <div class="col-3">
-                        <h3>Information About the Mummy</h3>
-
-
-
-                        <div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.HeadDirection">HeadDirection</label><br />
-
-                                <input asp-for="@Model.MummyInfos.HeadDirection" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.FieldBookYear">FieldBookYear</label><br />
-
-                                <input asp-for="@Model.MummyInfos.FieldBookYear">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.FieldBookPageNum">FieldBookPageNum</label><br />
-
-                                <input asp-for="@Model.MummyInfos.FieldBookPageNum">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.PreservationDescription">PreservationDescription</label><br />
-
-                                <input asp-for="@Model.MummyInfos.PreservationDescription">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.PreviouslySampled">PreviouslySampled</label><br />
-
-                                <input asp-for="@Model.MummyInfos.PreviouslySampled">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.BurialSituationNotes">BurialSituationNotes</label><br />
-
-                                <input asp-for="@Model.MummyInfos.BurialSituationNotes">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.LengthOfRemains">LengthOfRemains</label><br />
-
-                                <input asp-for="@Model.MummyInfos.LengthOfRemains">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.GefunctionTotal">GefunctionTotal</label><br />
-
-                                <input asp-for="@Model.MummyInfos.GefunctionTotal">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.SexGe">SexGE</label><br />
-
-                                <input asp-for="@Model.MummyInfos.SexGe">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.VentralArc">VentralArc</label><br />
-
-                                <input asp-for="@Model.MummyInfos.VentralArc">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.SubponicAngle">SubponicAngle</label><br />
-
-                                <input asp-for="@Model.MummyInfos.SubponicAngle">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.SciaticNotch">SciaticNotch</label><br />
-
-                                <input asp-for="@Model.MummyInfos.SciaticNotch">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.PubicBone">PubicBone</label><br />
-
-                                <input asp-for="@Model.MummyInfos.PubicBone">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.PreaurSulcus">PreaurSulcus</label><br />
-
-                                <input asp-for="@Model.MummyInfos.PreaurSulcus">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.MedialIpramus">MedialIPramus</label><br />
-
-                                <input asp-for="@Model.MummyInfos.MedialIpramus">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.DorsalPitting">DorsalPitting</label><br />
-
-                                <input asp-for="@Model.MummyInfos.DorsalPitting">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.FormanMagnum">Forman Magnum</label><br />
-
-                                <input asp-for="@Model.MummyInfos.FormanMagnum" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.FemurHead">FemurHead</label><br /><br />
-
-                                <input asp-for="@Model.MummyInfos.FemurHead" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.HumerusHead">HumerusHead</label><br />
-
-                                <input asp-for="@Model.MummyInfos.HumerusHead" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.Osteophystosis">Osteophystosis</label><br />
-
-                                <input asp-for="@Model.MummyInfos.Osteophystosis" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.PubicSymphysis">PubicSymphysis</label><br />
-
-                                <input asp-for="@Model.MummyInfos.PubicSymphysis" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.FemurLength">Femur Length</label><br />
-
-                                <input asp-for="@Model.MummyInfos.FemurLength" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.HumerusLength">HumerusLength</label><br />
-
-                                <input asp-for="@Model.MummyInfos.HumerusLength" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.TibiaLength">TibiaLength</label><br />
-
-                                <input asp-for="@Model.MummyInfos.TibiaLength" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.Robust">Robust</label><br />
-
-                                <input asp-for="@Model.MummyInfos.Robust" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.SupraorbitalRidges">SupraorbitalRidges</label><br />
-
-                                <input asp-for="@Model.MummyInfos.SupraorbitalRidges" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.OrbitEdge">OrbitEdge</label><br />
-
-                                <input asp-for="@Model.MummyInfos.OrbitEdge" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.ParietalBossing">ParietalBossing</label><br />
-
-                                <input asp-for="@Model.MummyInfos.ParietalBossing" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="@Model.MummyInfos.Gonian">Gonian</label><br />
-
-                                <input asp-for="@Model.MummyInfos.Gonian" />
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="col-3">
-                        <h3>Information About the Mummy</h3>
-
-                        
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.NuchalCrest">NuchalCrest</label><br />
-
-                            <input asp-for="@Model.MummyInfos.NuchalCrest" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ZygomaticCrest">ZygomaticCrest</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ZygomaticCrest" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.CranialSuture">CranialSuture</label><br />
-
-                            <input asp-for="@Model.MummyInfos.CranialSuture" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.EstLivingStature">EstLivingStature</label><br />
-
-                            <input asp-for="@Model.MummyInfos.EstLivingStature" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ToothAttrition">ToothAttrition</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ToothAttrition" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ToothEruption">ToothEruption</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ToothEruption" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.PathalogyAnomaly">PathalogyAnomaly</label><br />
-
-                            <input asp-for="@Model.MummyInfos.PathalogyAnomaly" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.EpiphysealUnion">EpiphysealUnion</label><br />
-
-                            <input asp-for="@Model.MummyInfos.EpiphysealUnion" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ByuSample">ByuSample</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ByuSample" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ToBeConfirmed">ToBeConfirmed</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ToBeConfirmed" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.SkullTrauma">SkullTrauma</label><br />
-
-                            <input asp-for="@Model.MummyInfos.SkullTrauma" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.PostcraniaTrauma">PostcraniaTrauma</label><br />
-
-                            <input asp-for="@Model.MummyInfos.PostcraniaTrauma" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.CibraOrbitala">Cibra Orbitala</label><br />
-
-                            <input asp-for="@Model.MummyInfos.CibraOrbitala" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.PoroticHyperostosis">PoroticHyperostosis</label><br />
-
-                            <input asp-for="@Model.MummyInfos.PoroticHyperostosis" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.PoroticHyperostosisLocations">PoroticHyperostosisLocations</label><br />
-
-                            <input asp-for="@Model.MummyInfos.PoroticHyperostosisLocations" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.MetopicSuture">MetopicSuture</label><br />
-
-                            <input asp-for="@Model.MummyInfos.MetopicSuture" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.ButtonOsteoma">ButtonOsteoma</label><br />
-
-                            <input asp-for="@Model.MummyInfos.ButtonOsteoma" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.OsteologyUnknownComment">OsteologyUnknownComment</label><br />
-
-                            <input asp-for="@Model.MummyInfos.OsteologyUnknownComment" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.TemporalMandibularJointOsteoarthritis">TemporalMandibularJointOsteoarthritis</label><br />
-
-                            <input asp-for="@Model.MummyInfos.TemporalMandibularJointOsteoarthritis" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.LinearHypoplasiaEnamel">LinearHypoplasiaEnamel</label><br />
-
-                            <input asp-for="@Model.MummyInfos.LinearHypoplasiaEnamel" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.Area">Area</label><br />
-
-                            <input asp-for="@Model.MummyInfos.Area" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.Tomb">Tomb</label><br />
-
-                            <input asp-for="@Model.MummyInfos.Tomb" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.FaceBundle">FaceBundle</label><br />
-
-                            <input asp-for="@Model.MummyInfos.FaceBundle" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.BodyAnalysisYear">BodyAnalysisYear</label><br />
-
-                            <input asp-for="@Model.MummyInfos.BodyAnalysisYear" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.SkullAtMagazine">SkullAtMagazine</label><br />
-
-                            <input asp-for="@Model.MummyInfos.SkullAtMagazine" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.PostcraniaAtMagazine">PostcraniaAtMagazine</label><br />
-
-                            <input asp-for="@Model.MummyInfos.PostcraniaAtMagazine" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.DataEntryExpert">DataEntryExpert</label><br />
-
-                            <input asp-for="@Model.MummyInfos.DataEntryExpert" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.DataEntryChecker">DataEntryChecker</label><br />
-
-                            <input asp-for="@Model.MummyInfos.DataEntryChecker" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="@Model.MummyInfos.OsteologyNotes">OsteologyNotes</label><br />
-
-                            <input asp-for="@Model.MummyInfos.OsteologyNotes" />
-
-                        </div>
-
-                    </div>
-                        
-
-
-
-                    </div>
-                
-
-
-
-                <div class="row justify-content-center text-dark text-center font-weight-bold">
-                    <div class="col-3">
-                        <h3>Sample Data</h3>
-
-
-                        @*<partial name="EditSampleInfo" model="Model.Samples" />*@
-                        <div>
-
-                            <label asp-for="Samples.SampleYear">SampleYear</label><br />
-
-                            <input asp-for="Samples.SampleYear" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Samples.SampleNotes">SampleNotes</label><br />
-
-                            <input asp-for="Samples.SampleNotes" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Samples.BagNum">BagNum</label><br />
-
-                            <input asp-for="Samples.BagNum" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Samples.RackNumByu">RackNumBYU</label><br />
-
-                            <input asp-for="Samples.RackNumByu" />
-
-                        </div>
-
-
-                        <div>
-
-                            <label asp-for="Samples.Initial">Initial</label><br />
-
-                            <input asp-for="Samples.Initial" />
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-3">
-                        <h3>Cluster Data</h3>
-
-
-                        @*<partial name="EditClusterInfo" model="Model.Cluster" />*@
-                        <div>
-
-                            <label asp-for="Cluster.ClusterNum">Cluster Number</label> <br />
-
-                            <input asp-for="Cluster.ClusterNum" />
-
-                        </div>
-
-
-
-                    </div>
-                    <div class="col-3">
-                        <h3>Cranium Data</h3>
-
-
-
-                        @*<partial name="EditCranium" model="Model.CraniumSample" />*@
-                        <div>
-                            <div>
-
-                                <label asp-for="CraniumSample.MaxCranialLength">MaxCranialLength</label><br />
-
-                                <input asp-for="CraniumSample.MaxCranialLength">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.MaxCranialBreadth">MaxCranialBreadth</label><br />
-
-                                <input asp-for="CraniumSample.MaxCranialBreadth">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.BasionBregmaHeight ">BasionBregmaHeight</label><br />
-
-                                <input asp-for="CraniumSample.BasionBregmaHeight">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.BasionNasion">BasionNasion</label><br />
-
-                                <input asp-for="CraniumSample.BasionNasion">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.BasionProsthionLength">BasionProsthionLength</label><br />
-
-                                <input asp-for="CraniumSample.BasionProsthionLength">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.BizygomaticDiameter">BizygomaticDiameter</label><br />
-
-                                <input asp-for="CraniumSample.BizygomaticDiameter">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.NasionProsthion">NasionProsthion</label><br />
-
-                                <input asp-for="CraniumSample.NasionProsthion">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.MaxNasalBreadth">MaxNasalBreadth</label><br />
-
-                                <input asp-for="CraniumSample.MaxNasalBreadth">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.InterorbitalBreadth">InterorbitalBreadth</label><br />
-
-                                <input asp-for="CraniumSample.InterorbitalBreadth">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.ShelfNum">ShelfNum</label><br />
-
-                                <input asp-for="CraniumSample.ShelfNum">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.RackNumEgypt">RackNumEgypt</label><br />
-
-                                <input asp-for="CraniumSample.RackNumEgypt">
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="CraniumSample.GilesSex">GilesSex</label><br />
-
-                                <input asp-for="CraniumSample.GilesSex">
-
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
 
+                <div>
 
-                <div class="row justify-content-center text-dark text-center font-weight-bold">
+                    <label asp-for="@Model.MummyInfos.FieldBookYear">FieldBookYear</label><br />
 
-
-                    <div class="col-3">
-                        <h3>Quadrant Data</h3>
-
-
-                        @*<partial name="EditQuadrant" model="Model.Quadrants" />*@
-                        <div>
-                            <input asp-for="Quadrants.QuadrantId" type="hidden" value="3" />
-
-                            <label asp-for="Quadrants.QuadrantDirection">Quadrant Direction (I.e. ME, MW, SE, SW)</label><br />
-
-                            <input asp-for="Quadrants.QuadrantDirection" />
-
-                        </div>
-
-
-                    </div>
-                    <div class="col-3">
-                        <h3>Square Data</h3>
-
-                        @*<partial name="EditSquare" model="Model.Square" />*@
-                        <div>
-
-                            <label asp-for="Square.LowNs">N/S Low Number</label><br />
-
-                            <input asp-for="Square.LowNs" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Square.HighNs">High Ns</label><br />
-
-                            <input asp-for="Square.HighNs" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Square.NS">North or South</label><br />
-
-                            <input asp-for="Square.NS" />
-
-                        </div>
-
-                        <div>
-
-                            <label asp-for="Square.LowEw">E/W Low Number</label><br />
-
-                            <input asp-for="Square.LowEw" />
-
-                        </div>
-
-
-                        <div>
-
-                            <label asp-for="Square.HighEw">E/W High Number</label><br />
-
-                            <input asp-for="Square.HighEw" />
-
-                        </div>
-                        <div>
-
-                            <label asp-for="Square.EW">East or West?</label><br />
-
-                            <input asp-for="Square.EW" />
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-3">
-                        <h3>C14 Data</h3>
-
-
-                        @*<partial name="EditC14" model="Model.C14Sample" />*@
-                        <div>
-                            <div>
-
-                                <label asp-for="C14Sample.Tube">Tube</label><br />
-
-                                <input asp-for="C14Sample.Tube" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.C14description">C14Description</label><br />
-
-                                <input asp-for="C14Sample.C14description" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Size">Size</label><br />
-
-                                <input asp-for="C14Sample.Size" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Foci">Foci</label><br />
-
-                                <input asp-for="C14Sample.Foci" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.C14Sample2017">C14Sample2017</label><br />
-
-                                <input asp-for="C14Sample.C14Sample2017" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Location">Location</label><br />
-
-                                <input asp-for="C14Sample.Location" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Questions">Questions</label><br />
-
-                                <input asp-for="C14Sample.Questions" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Conventional14CageBp">Conventional14CageBP</label><br />
-
-                                <input asp-for="C14Sample.Conventional14CageBp" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.C14calendarDate">C14CalendarDate</label><br />
-
-                                <input asp-for="C14Sample.C14calendarDate" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Calibrated95perCalendarDateMax">Calibrated95perCalendarDateMax</label><br />
-
-                                <input asp-for="C14Sample.Calibrated95perCalendarDateMax" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Calibrated95perCalendarDateMin">Calibrated95perCalendarDateMin</label><br />
-
-                                <input asp-for="C14Sample.Calibrated95perCalendarDateMin" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Calibrated95perCalendarDateSpan">Calibrated95perCalendarDateSpan</label><br />
-
-                                <input asp-for="C14Sample.Calibrated95perCalendarDateSpan" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Calibrated95perCalendarAvg">Calibrated95perCalendarAvg</label><br />
-
-                                <input asp-for="C14Sample.Calibrated95perCalendarAvg" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Category">Category</label><br />
-
-                                <input asp-for="C14Sample.Category" />
-
-                            </div>
-
-                            <div>
-
-                                <label asp-for="C14Sample.Lab">Lab</label><br />
-
-                                <input asp-for="C14Sample.Lab" />
-
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <input asp-for="@Model.MummyInfos.FieldBookYear">
 
                 </div>
-            </form>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.FieldBookPageNum">FieldBookPageNum</label><br />
+
+                    <input asp-for="@Model.MummyInfos.FieldBookPageNum">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.PreservationDescription">PreservationDescription</label><br />
+
+                    <input asp-for="@Model.MummyInfos.PreservationDescription">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.PreviouslySampled">PreviouslySampled</label><br />
+
+                    <input asp-for="@Model.MummyInfos.PreviouslySampled">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.BurialSituationNotes">BurialSituationNotes</label><br />
+
+                    <input asp-for="@Model.MummyInfos.BurialSituationNotes">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.LengthOfRemains">LengthOfRemains</label><br />
+
+                    <input asp-for="@Model.MummyInfos.LengthOfRemains">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.GefunctionTotal">GefunctionTotal</label><br />
+
+                    <input asp-for="@Model.MummyInfos.GefunctionTotal">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SexGe">SexGE</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SexGe">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.VentralArc">VentralArc</label><br />
+
+                    <input asp-for="@Model.MummyInfos.VentralArc">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SubponicAngle">SubponicAngle</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SubponicAngle">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SciaticNotch">SciaticNotch</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SciaticNotch">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.PubicBone">PubicBone</label><br />
+
+                    <input asp-for="@Model.MummyInfos.PubicBone">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.PreaurSulcus">PreaurSulcus</label><br />
+
+                    <input asp-for="@Model.MummyInfos.PreaurSulcus">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.MedialIpramus">MedialIPramus</label><br />
+
+                    <input asp-for="@Model.MummyInfos.MedialIpramus">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.DorsalPitting">DorsalPitting</label><br />
+
+                    <input asp-for="@Model.MummyInfos.DorsalPitting">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.FormanMagnum">Forman Magnum</label><br />
+
+                    <input asp-for="@Model.MummyInfos.FormanMagnum" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.FemurHead">FemurHead</label><br /><br />
+
+                    <input asp-for="@Model.MummyInfos.FemurHead" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.HumerusHead">HumerusHead</label><br />
+
+                    <input asp-for="@Model.MummyInfos.HumerusHead" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Osteophystosis">Osteophystosis</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Osteophystosis" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.PubicSymphysis">PubicSymphysis</label><br />
+
+                    <input asp-for="@Model.MummyInfos.PubicSymphysis" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.FemurLength">Femur Length</label><br />
+
+                    <input asp-for="@Model.MummyInfos.FemurLength" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.HumerusLength">HumerusLength</label><br />
+
+                    <input asp-for="@Model.MummyInfos.HumerusLength" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.TibiaLength">TibiaLength</label><br />
+
+                    <input asp-for="@Model.MummyInfos.TibiaLength" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Robust">Robust</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Robust" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.SupraorbitalRidges">SupraorbitalRidges</label><br />
+
+                    <input asp-for="@Model.MummyInfos.SupraorbitalRidges" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.OrbitEdge">OrbitEdge</label><br />
+
+                    <input asp-for="@Model.MummyInfos.OrbitEdge" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.ParietalBossing">ParietalBossing</label><br />
+
+                    <input asp-for="@Model.MummyInfos.ParietalBossing" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="@Model.MummyInfos.Gonian">Gonian</label><br />
+
+                    <input asp-for="@Model.MummyInfos.Gonian" />
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-3">
+            <h3>Information About the Mummy</h3>
+
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.NuchalCrest">NuchalCrest</label><br />
+
+                <input asp-for="@Model.MummyInfos.NuchalCrest" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ZygomaticCrest">ZygomaticCrest</label><br />
+
+                <input asp-for="@Model.MummyInfos.ZygomaticCrest" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.CranialSuture">CranialSuture</label><br />
+
+                <input asp-for="@Model.MummyInfos.CranialSuture" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.EstLivingStature">EstLivingStature</label><br />
+
+                <input asp-for="@Model.MummyInfos.EstLivingStature" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ToothAttrition">ToothAttrition</label><br />
+
+                <input asp-for="@Model.MummyInfos.ToothAttrition" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ToothEruption">ToothEruption</label><br />
+
+                <input asp-for="@Model.MummyInfos.ToothEruption" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.PathalogyAnomaly">PathalogyAnomaly</label><br />
+
+                <input asp-for="@Model.MummyInfos.PathalogyAnomaly" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.EpiphysealUnion">EpiphysealUnion</label><br />
+
+                <input asp-for="@Model.MummyInfos.EpiphysealUnion" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ByuSample">ByuSample</label><br />
+
+                <input asp-for="@Model.MummyInfos.ByuSample" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ToBeConfirmed">ToBeConfirmed</label><br />
+
+                <input asp-for="@Model.MummyInfos.ToBeConfirmed" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.SkullTrauma">SkullTrauma</label><br />
+
+                <input asp-for="@Model.MummyInfos.SkullTrauma" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.PostcraniaTrauma">PostcraniaTrauma</label><br />
+
+                <input asp-for="@Model.MummyInfos.PostcraniaTrauma" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.CibraOrbitala">Cibra Orbitala</label><br />
+
+                <input asp-for="@Model.MummyInfos.CibraOrbitala" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.PoroticHyperostosis">PoroticHyperostosis</label><br />
+
+                <input asp-for="@Model.MummyInfos.PoroticHyperostosis" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.PoroticHyperostosisLocations">PoroticHyperostosisLocations</label><br />
+
+                <input asp-for="@Model.MummyInfos.PoroticHyperostosisLocations" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.MetopicSuture">MetopicSuture</label><br />
+
+                <input asp-for="@Model.MummyInfos.MetopicSuture" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.ButtonOsteoma">ButtonOsteoma</label><br />
+
+                <input asp-for="@Model.MummyInfos.ButtonOsteoma" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.OsteologyUnknownComment">OsteologyUnknownComment</label><br />
+
+                <input asp-for="@Model.MummyInfos.OsteologyUnknownComment" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.TemporalMandibularJointOsteoarthritis">TemporalMandibularJointOsteoarthritis</label><br />
+
+                <input asp-for="@Model.MummyInfos.TemporalMandibularJointOsteoarthritis" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.LinearHypoplasiaEnamel">LinearHypoplasiaEnamel</label><br />
+
+                <input asp-for="@Model.MummyInfos.LinearHypoplasiaEnamel" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.Area">Area</label><br />
+
+                <input asp-for="@Model.MummyInfos.Area" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.Tomb">Tomb</label><br />
+
+                <input asp-for="@Model.MummyInfos.Tomb" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.FaceBundle">FaceBundle</label><br />
+
+                <input asp-for="@Model.MummyInfos.FaceBundle" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.BodyAnalysisYear">BodyAnalysisYear</label><br />
+
+                <input asp-for="@Model.MummyInfos.BodyAnalysisYear" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.SkullAtMagazine">SkullAtMagazine</label><br />
+
+                <input asp-for="@Model.MummyInfos.SkullAtMagazine" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.PostcraniaAtMagazine">PostcraniaAtMagazine</label><br />
+
+                <input asp-for="@Model.MummyInfos.PostcraniaAtMagazine" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.DataEntryExpert">DataEntryExpert</label><br />
+
+                <input asp-for="@Model.MummyInfos.DataEntryExpert" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.DataEntryChecker">DataEntryChecker</label><br />
+
+                <input asp-for="@Model.MummyInfos.DataEntryChecker" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="@Model.MummyInfos.OsteologyNotes">OsteologyNotes</label><br />
+
+                <input asp-for="@Model.MummyInfos.OsteologyNotes" />
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <div class="row justify-content-center text-dark text-center font-weight-bold">
+        <div class="col-3">
+            <h3>Sample Data</h3>
+
+
+            @*<partial name="EditSampleInfo" model="Model.Samples" />*@
+            <div>
+
+                <label asp-for="Samples.SampleYear">SampleYear</label><br />
+
+                <input asp-for="Samples.SampleYear" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Samples.SampleNotes">SampleNotes</label><br />
+
+                <input asp-for="Samples.SampleNotes" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Samples.BagNum">BagNum</label><br />
+
+                <input asp-for="Samples.BagNum" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Samples.RackNumByu">RackNumBYU</label><br />
+
+                <input asp-for="Samples.RackNumByu" />
+
+            </div>
+
+
+            <div>
+
+                <label asp-for="Samples.Initial">Initial</label><br />
+
+                <input asp-for="Samples.Initial" />
+
+            </div>
+
+
+        </div>
+
+        <div class="col-3">
+            <h3>Cluster Data</h3>
+
+
+            @*<partial name="EditClusterInfo" model="Model.Cluster" />*@
+            <div>
+
+                <label asp-for="Cluster.ClusterNum">Cluster Number</label> <br />
+
+                <input asp-for="Cluster.ClusterNum" />
+
+            </div>
+
+
+
+        </div>
+        <div class="col-3">
+            <h3>Cranium Data</h3>
+
+
+
+            @*<partial name="EditCranium" model="Model.CraniumSample" />*@
+            <div>
+                <div>
+
+                    <label asp-for="CraniumSample.MaxCranialLength">MaxCranialLength</label><br />
+
+                    <input asp-for="CraniumSample.MaxCranialLength">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.MaxCranialBreadth">MaxCranialBreadth</label><br />
+
+                    <input asp-for="CraniumSample.MaxCranialBreadth">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.BasionBregmaHeight ">BasionBregmaHeight</label><br />
+
+                    <input asp-for="CraniumSample.BasionBregmaHeight">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.BasionNasion">BasionNasion</label><br />
+
+                    <input asp-for="CraniumSample.BasionNasion">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.BasionProsthionLength">BasionProsthionLength</label><br />
+
+                    <input asp-for="CraniumSample.BasionProsthionLength">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.BizygomaticDiameter">BizygomaticDiameter</label><br />
+
+                    <input asp-for="CraniumSample.BizygomaticDiameter">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.NasionProsthion">NasionProsthion</label><br />
+
+                    <input asp-for="CraniumSample.NasionProsthion">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.MaxNasalBreadth">MaxNasalBreadth</label><br />
+
+                    <input asp-for="CraniumSample.MaxNasalBreadth">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.InterorbitalBreadth">InterorbitalBreadth</label><br />
+
+                    <input asp-for="CraniumSample.InterorbitalBreadth">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.ShelfNum">ShelfNum</label><br />
+
+                    <input asp-for="CraniumSample.ShelfNum">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.RackNumEgypt">RackNumEgypt</label><br />
+
+                    <input asp-for="CraniumSample.RackNumEgypt">
+
+                </div>
+
+                <div>
+
+                    <label asp-for="CraniumSample.GilesSex">GilesSex</label><br />
+
+                    <input asp-for="CraniumSample.GilesSex">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center text-dark text-center font-weight-bold">
+
+
+        <div class="col-3">
+            <h3>Quadrant Data</h3>
+
+
+            @*<partial name="EditQuadrant" model="Model.Quadrants" />*@
+            <div>
+                <input asp-for="Quadrants.QuadrantId" type="hidden" value="3" />
+
+                <label asp-for="Quadrants.QuadrantDirection">Quadrant Direction (I.e. ME, MW, SE, SW)</label><br />
+
+                <input asp-for="Quadrants.QuadrantDirection" />
+
+            </div>
+
+
+        </div>
+        <div class="col-3">
+            <h3>Square Data</h3>
+
+            @*<partial name="EditSquare" model="Model.Square" />*@
+            <div>
+
+                <label asp-for="Square.LowNs">N/S Low Number</label><br />
+
+                <input asp-for="Square.LowNs" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Square.HighNs">High Ns</label><br />
+
+                <input asp-for="Square.HighNs" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Square.NS">North or South</label><br />
+
+                <input asp-for="Square.NS" />
+
+            </div>
+
+            <div>
+
+                <label asp-for="Square.LowEw">E/W Low Number</label><br />
+
+                <input asp-for="Square.LowEw" />
+
+            </div>
+
+
+            <div>
+
+                <label asp-for="Square.HighEw">E/W High Number</label><br />
+
+                <input asp-for="Square.HighEw" />
+
+            </div>
+            <div>
+
+                <label asp-for="Square.EW">East or West?</label><br />
+
+                <input asp-for="Square.EW" />
+
+            </div>
+
+        </div>
+
+
+        <div class="col-3">
+            <h3>C14 Data</h3>
+
+
+            @*<partial name="EditC14" model="Model.C14Sample" />*@
+            <div>
+                <div>
+
+                    <label asp-for="C14Sample.Tube">Tube</label><br />
+
+                    <input asp-for="C14Sample.Tube" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.C14description">C14Description</label><br />
+
+                    <input asp-for="C14Sample.C14description" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Size">Size</label><br />
+
+                    <input asp-for="C14Sample.Size" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Foci">Foci</label><br />
+
+                    <input asp-for="C14Sample.Foci" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.C14Sample2017">C14Sample2017</label><br />
+
+                    <input asp-for="C14Sample.C14Sample2017" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Location">Location</label><br />
+
+                    <input asp-for="C14Sample.Location" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Questions">Questions</label><br />
+
+                    <input asp-for="C14Sample.Questions" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Conventional14CageBp">Conventional14CageBP</label><br />
+
+                    <input asp-for="C14Sample.Conventional14CageBp" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.C14calendarDate">C14CalendarDate</label><br />
+
+                    <input asp-for="C14Sample.C14calendarDate" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Calibrated95perCalendarDateMax">Calibrated95perCalendarDateMax</label><br />
+
+                    <input asp-for="C14Sample.Calibrated95perCalendarDateMax" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Calibrated95perCalendarDateMin">Calibrated95perCalendarDateMin</label><br />
+
+                    <input asp-for="C14Sample.Calibrated95perCalendarDateMin" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Calibrated95perCalendarDateSpan">Calibrated95perCalendarDateSpan</label><br />
+
+                    <input asp-for="C14Sample.Calibrated95perCalendarDateSpan" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Calibrated95perCalendarAvg">Calibrated95perCalendarAvg</label><br />
+
+                    <input asp-for="C14Sample.Calibrated95perCalendarAvg" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Category">Category</label><br />
+
+                    <input asp-for="C14Sample.Category" />
+
+                </div>
+
+                <div>
+
+                    <label asp-for="C14Sample.Lab">Lab</label><br />
+
+                    <input asp-for="C14Sample.Lab" />
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</form>

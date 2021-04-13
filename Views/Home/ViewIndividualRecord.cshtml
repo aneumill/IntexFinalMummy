@@ -19,7 +19,7 @@
             </div>
       
 
-                <div class="row justify-content-left text-dark  font-weight-bold card-columns">
+                <div class="row justify-content-center text-dark  font-weight-bold card-columns">
                     <div class="col-3 ">
                         <h3>Information About the Mummy</h3>
                       
@@ -30,16 +30,14 @@
 
                     </div>
                     <div class="col-3">
-                        <h3>Information About the Mummy</h3>
                         
-                          
                             <partial name="ViewIndividualRecordSummary2" model="Model.MummyInfos" />
                         
 
 
                     </div>
-                    <div class="col-3">
-                        <h3>Information About the Mummy</h3>
+                    <div class="col-3 ">
+                        
                         
                           
                             <partial name="ViewIndividualRecordSummary3" model="Model.MummyInfos" />
@@ -51,7 +49,7 @@
 
 
 
-                <div class="row justify-content-left text-dark  font-weight-bold">
+                <div class="row justify-content-center text-dark  font-weight-bold">
                     <div class="col-3">
                         <h3>Sample Data</h3>
                         
@@ -84,7 +82,7 @@
                     </div>
        
 
-                <div class="row justify- text-dark font-weight-bold">
+                <div class="row justify-content-lg-center text-dark font-weight-bold">
                    
                        
                         <div class="col-3">
@@ -120,353 +118,26 @@
             
                 <br /><br />
 
-                    @*<div class="row">
-            <h3>Sample Data</h3>
-            <div class="col-4">
-                @foreach (var x in Model.Samples)
+         
 
-                {
-                    //See the MyMovieSummary file for the partial view
-                    <partial name="SampleSummary" model="x" />
-                }
 
 
-            </div>
-            <div class="col-4">
-                <h3>Cluster Data</h3>
-                @foreach (var x in Model.Cluster)
-                {
-                    //See the MyMovieSummary file for the partial view
-                    <partial name="ClusterSummary" model="x" />
-                }
 
 
 
-            </div>
-            <div class="col-4">
-                <h3>Cranium Data</h3>
 
-                @foreach (var x in Model.CraniumSample)
-                {
-                    //See the MyMovieSummary file for the partial view
-                    <partial name="CraniumSummary" model="x" />
-                }
 
-            </div>
-        </div>*@
 
-                    @*<div class="row">
-                        <h3>Quadrant Data</h3>
-                        <div class="col-4">
-                            @foreach (var x in Model.Quadrants)
 
-                            {
-                                //See the MyMovieSummary file for the partial view
-                                <partial name="QuadrantSummary" model="x" />
-                            }
 
 
-                        </div>
-                        <div class="col-4">
-                            <h3>Square Data</h3>
-                            @foreach (var x in Model.Square)
-                            {
-                                //See the MyMovieSummary file for the partial view
-                                <partial name="SquareSummary" model="x" />
-                            }
 
 
 
-                        </div>
-                        <div class="col-4">
-                            <h3>C14 Data</h3>
 
-                            @foreach (var x in Model.C14Sample)
-                            {
-                                //See the MyMovieSummary file for the partial view
-                                <partial name="C14Summary" model="x" />
-                            }
 
-                        </div>
-                    </div>
 
 
-                </div>*@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @*<br /><br /><br />
-        <div class="container">
-
-
-
-
-            <table class="table table-dark table-striped col-10 ">
-                <thead>
-                    <tr>
-                        <th>Mummy ID</th>
-                        <th>Burial Number</th>
-                        <th>Adult/Child</th>
-                        <th>Sex</th>
-                        <th>Sex Method</th>
-                        <th>Min Age</th>
-                        <th>Max Age</th>
-                        <th>Hair Color</th>
-                        <th>Sample</th>
-                        <th>Year Discovered</th>
-                        <th>Month Disovered</th>
-                        <th>Day Disovered</th>
-                        <th>Artifacts</th>
-                        <th>Artifacts Description</th>
-                        <th>Hair Taken</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary1" model="x" />
-                    }
-
-
-
-                </tbody>
-
-
-
-            </table>
-
-            <table class="table table-dark table-striped col-10">
-                <thead>
-                    <tr>
-                        <th>Burial Depth</th>
-                        <th>Extracted Order</th>
-                        <th>Skull Year</th>
-                        <th>Skull Month</th>
-                        <th>Skull Day</th>
-                        <th>South to Head</th>
-                        <th>South to Feet</th>
-                        <th>West to Head</th>
-                        <th>West to Feet</th>
-                        <th>Head Direction</th>
-                        <th>Field Book Year</th>
-                        <th>Field Book Page Num</th>
-                        <th>Preservation Description</th>
-                        <th>Previously Sampled</th>
-                        <th>Burial Situation</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary2" model="x" />
-                    }
-
-
-
-
-
-
-                </tbody>
-            </table>
-
-            <table class="table table-dark table-striped col-10">
-                <thead>
-                    <tr>
-                        <th>Length of Remains</th>
-                        <th>Ge Funtion Total</th>
-                        <th>Se Gender Total</th>
-                        <th>Ventral Arc</th>
-                        <th>Subponic Angle</th>
-                        <th>Sciatic Notch</th>
-                        <th>Pubic Bone</th>
-                        <th>Preaur Suculus</th>
-                        <th>Medial Impramus</th>
-                        <th>Dorsal Pitting</th>
-                        <th>Forman Mangum</th>
-                        <th>Femur Head</th>
-                        <th>Humerus Head</th>
-                        <th>Osteophystosis</th>
-                        <th>Pubic Symphsis</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary3" model="x" />
-                    }
-
-
-
-
-
-
-                </tbody>
-            </table>
-
-            <table class="table table-dark table-striped col-10">
-                <thead>
-                    <tr>
-                        <th>Femur Length</th>
-                        <th>Humerus Length</th>
-                        <th>Tibia Length</th>
-                        <th>Robust</th>
-                        <th>Suborbital Ridges</th>
-                        <th>OrbitEdge</th>
-                        <th>Partial Bossing</th>
-                        <th>Gonian</th>
-                        <th>Nuchal Crest</th>
-                        <th>Zygomatic Crest</th>
-                        <th>Cranial Structure</th>
-                        <th>EstLivingStature</th>
-                        <th>Tooth Attrition</th>
-                        <th>Tooth Eruption</th>
-                        <th>Pathology Anamoly</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary4" model="x" />
-                    }
-
-
-
-
-
-
-                </tbody>
-            </table>
-
-
-
-            <table class="table table-dark table-striped col-10">
-                <thead>
-                    <tr>
-                        <th>Epipyseal Union</th>
-                        <th>BYU Sample</th>
-                        <th>To Be Confirmed</th>
-                        <th>Skull Trauma</th>
-                        <th>Postcranial Trauma</th>
-                        <th>Cibra Oribala</th>
-                        <th>Porotic Hyeprstosis</th>
-                        <th>Porotic Hyperstotsis Location</th>
-                        <th>Metopic Suture</th>
-                        <th>Button Osteoma</th>
-                        <th>Osteology Unknown Comment</th>
-                        <th>Temportal Mandibular Joint</th>
-                        <th>Linear Hypoplasias Enamel</th>
-                        <th>Area</th>
-                        <th>Tomb</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary5" model="x" />
-                    }
-
-
-
-
-
-
-                </tbody>
-            </table>
-            <table class="table table-dark table-striped col-10">
-                <thead>
-                    <tr>
-                        <th>Soft Tissue Taken</th>
-                        <th>Bone Taken</th>
-                        <th>Tooth Taken</th>
-                        <th>Textile Taken</th>
-                        <th>Mummy Description</th>
-                        <th>Face Bundle</th>
-                        <th>Body Analysis Year</th>
-                        <th>Skull at Magazine</th>
-                        <th>PostCranial Magazine</th>
-                        <th>Dataentry Expert</th>
-                        <th>Dataentry Checker</th>
-                        <th>Osteology Notes</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var x in Model.MummyInfos)
-
-                    {
-
-                        //See the MyMovieSummary file for the partial view
-                        <partial name="ViewIndividualRecordSummary6" model="x" />
-                    }
-
-
-
-
-
-
-                </tbody>
-            </table>
-        </div>*@
 
 

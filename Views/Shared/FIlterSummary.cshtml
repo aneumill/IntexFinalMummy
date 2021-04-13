@@ -59,7 +59,10 @@
     <div class="d-inline">
         <a class="btn btn-dark justify-content-md-center d-inline-flex" asp-controller="Home" asp-action="ViewRecords">Clear Selection</a>
     </div>
-    <div class="d-inline">
-        <a class="btn btn-dark justify-content-md-center d-inline-flex" type="get" asp-controller="Home" asp-action="AddRecord">Add A Record</a>
-    </div>
+    @if (User.IsInRole("User") || User.IsInRole("Admin"))
+    {
+        <div class="d-inline">
+            <a class="btn btn-dark justify-content-md-center d-inline-flex" type="get" asp-controller="Home" asp-action="AddRecord">Add A Record</a>
+        </div>
+    }
 </form>

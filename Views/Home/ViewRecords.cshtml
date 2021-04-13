@@ -42,8 +42,13 @@
                                 <th class="cell100 column6">Burial Depth</th>
                                 <th class="cell100 column7">Burial Goods</th>
                                 <th class="cell100 column8">Burial Description</th>
-                                <th class="cell100 column9">View Record</th>
-                                <th class="cell100 column9">Delete Record</th>
+                               
+                            <th class="cell100 column9">View Record</th>}
+                                
+                                @if (User.IsInRole("Admin"))
+                                {
+                            <th class="cell100 column9">Delete Record</th>
+                                }
                             </tr>
                             <br />
                             <br />

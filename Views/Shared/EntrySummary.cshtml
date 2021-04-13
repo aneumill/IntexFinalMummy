@@ -19,6 +19,11 @@
     <td class="cell100 column6">@Model.BurialDepth</td>
     <td class="cell100 column7">@Model.ArtifactsDescription</td>
     <td class="cell100 column8">@Model.MummyDescription</td>
-    <partial name="ViewIndividualRecordButtonSummary" />
-    <partial name="DeleteButtonSummary" />
+  
+        <partial name="ViewIndividualRecordButtonSummary" />
+    
+    @if (User.IsInRole("Admin"))
+    {
+        <partial name="DeleteButtonSummary" />
+    }
 </tr>

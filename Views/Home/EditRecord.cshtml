@@ -1,0 +1,110 @@
+﻿@model IntexFinalMummy.Models.ViewModels.EditRecordViewModel
+
+<div class="text-center">
+
+    <partial name="TitleSummary" model="Model.MummyInfos" />
+
+</div>
+<div>
+    <partial name="EditRecordButtonSummary" model="Model.MummyInfos" />
+</div>
+
+
+<div class="row justify-content-center text-dark text-center font-weight-bold">
+    <div class="col-3">
+        <h3>Information About the Mummy</h3>
+
+        <partial name="EditMummyInfo1" model="Model.MummyInfos" />
+
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Information About the Mummy</h3>
+
+
+        <partial name="EditMummyInfo2" model="Model.MummyInfos" />
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Information About the Mummy</h3>
+
+
+        <partial name="EditMummyInfo3" model="Model.MummyInfos" />
+
+
+
+    </div>
+</div>
+
+
+
+<div class="row justify-content-center text-dark text-center font-weight-bold">
+    <div class="col-3">
+        <h3>Sample Data</h3>
+
+
+        <partial name="EditSampleInfo" model="Model.Samples" />
+
+
+
+    </div>
+
+    <div class="col-3">
+        <h3>Cluster Data</h3>
+
+
+        <partial name="EditClusterInfo" model="Model.Cluster" />
+
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Cranium Data</h3>
+
+
+
+        <partial name="EditCranium" model="Model.CraniumSample" />
+
+
+    </div>
+</div>
+
+
+<div class="row justify-content-center text-dark text-center font-weight-bold">
+
+
+    <div class="col-3">
+        <h3>Quadrant Data</h3>
+
+
+        <partial name="EditQuadrant" model="Model.Quadrants" />
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Square Data</h3>
+
+
+        <partial name="EditSquare" model="Model.Square" />
+
+    </div>
+
+
+    <div class="col-3">
+        <h3>C14 Data</h3>
+
+
+        <partial name="EditC14" model="Model.C14Sample" />
+
+
+    </div>
+
+
+</div>
+

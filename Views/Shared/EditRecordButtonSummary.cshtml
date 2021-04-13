@@ -1,0 +1,20 @@
+﻿
+@model IntexFinalMummy.Models.MummyInfo
+
+<!-- This is the Edit Indivdual Record Button-->
+<td>
+    <form id="@Model.MummyId" asp-action="EditRecord" method="get">
+
+        <span class="card-text">
+
+            <button class="btn btn-success" type="submit">Edit Record</button>
+
+            <input asp-for="MummyId" type="hidden" value="@Model.MummyId" />
+            <input asp-for="QuadrantId" type="hidden" value="@Model.QuadrantId" />
+            <input asp-for="ClusterId" type="hidden" value="@Model.ClusterId" />
+
+
+        </span>
+
+    </form>
+</td>

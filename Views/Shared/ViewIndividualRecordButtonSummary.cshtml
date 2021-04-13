@@ -9,8 +9,11 @@
             <button class="btn btn-info" type="submit">View Full Record</button>
 
             <input asp-for="MummyId" type="hidden" value="@Model.MummyId" />
+            <input asp-for="QuadrantId" type="hidden" value="@Model.QuadrantId" />
+            <input asp-for="ClusterId" type="hidden" value="@Model.ClusterId" />
+          
 
-            <input type="hidden" asp-for="BurialNumber" />
+            @*<input type="hidden" asp-for="BurialNumber" />
 
             <input type="hidden" asp-for="AdultChild" />
 
@@ -180,7 +183,7 @@
 
             <input type="hidden" asp-for="DataEntryChecker" />
 
-            <input type="hidden" asp-for="OsteologyNotes" />
+            <input type="hidden" asp-for="OsteologyNotes" />*@
 
         </span>
 

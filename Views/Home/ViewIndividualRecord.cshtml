@@ -4,50 +4,194 @@
 @{
 }
 
-@model IntexFinalMummy.Models.ViewModels.IndexViewModel
+@model IntexFinalMummy.Models.ViewModels.EditRecordViewModel
 
 <br /><br /><br />
-<div >
-
-   
-
-</div>
-    <div class="row container justify-content-center text-dark text-center font-weight-bold">
-        <div class="col-4">
-            @foreach (var x in Model.MummyInfos)
-
-            {
-                //See the MyMovieSummary file for the partial view
-                <partial name="ViewIndividualRecordSummary1" model="x" />
-            }
 
 
+            <div class="text-center">
+               
+                    <partial name="TitleSummary" model="Model.MummyInfos" />
+               
+            </div>
+            <div>
+                <partial name="EditRecordButtonSummary" model="Model.MummyInfos" />
+            </div>
+      
+
+                <div class="row justify-content-center text-dark text-center font-weight-bold">
+                    <div class="col-3">
+                        <h3>Information About the Mummy</h3>
+                      
+                            <partial name="ViewIndividualRecordSummary1" model="Model.MummyInfos" />
+                        
 
 
-        </div>
-        <div class="col-4">
-            @foreach (var x in Model.MummyInfos)
 
-            {
-                //See the MyMovieSummary file for the partial view
-                <partial name="ViewIndividualRecordSummary2" model="x" />
-            }
-
-
-        </div>
-        <div class="col-4">
-
-            @foreach (var x in Model.MummyInfos)
-
-            {
-                //See the MyMovieSummary file for the partial view
-                <partial name="ViewIndividualRecordSummary3" model="x" />
-            }
+                    </div>
+                    <div class="col-3">
+                        <h3>Information About the Mummy</h3>
+                        
+                          
+                            <partial name="ViewIndividualRecordSummary2" model="Model.MummyInfos" />
+                        
 
 
-        </div>
-    </div>
+                    </div>
+                    <div class="col-3">
+                        <h3>Information About the Mummy</h3>
+                        
+                          
+                            <partial name="ViewIndividualRecordSummary3" model="Model.MummyInfos" />
+                        
 
+
+                    </div>
+                </div>
+
+
+
+                <div class="row justify-content-center text-dark text-center font-weight-bold">
+                    <div class="col-3">
+                        <h3>Sample Data</h3>
+                        
+                    
+                            <partial name="SampleSummary" model="Model.Samples" />
+                        
+
+
+                    </div>
+                  
+                        <div class="col-3">
+                            <h3>Cluster Data</h3>
+                            
+                                
+                                <partial name="ClusterSummary" model="Model.Cluster" />
+                            
+
+
+
+                        </div>
+                        <div class="col-3">
+                            <h3>Cranium Data</h3>
+
+                            
+                              
+                                <partial name="CraniumSummary" model="Model.CraniumSample" />
+                            
+
+                        </div>
+                    </div>
+       
+
+                <div class="row justify-content-center text-dark text-center font-weight-bold">
+                   
+                       
+                        <div class="col-3">
+                             <h3>Quadrant Data</h3>
+                            
+                          
+                                <partial name="QuadrantSummary" model="Model.Quadrants" />
+                            
+
+
+                        </div >
+                        <div class="col-3">
+                            <h3>Square Data</h3>
+                            
+                                
+                                <partial name="SquareSummary" model="Model.Square" />
+                            
+                        </div>
+
+                                                        
+                        <div class="col-3">
+                            <h3>C14 Data</h3>
+
+                        
+                                <partial name="C14Summary" model="Model.C14Sample" />
+                            
+
+                        </div>
+                        
+                    
+                </div>
+          
+            
+                <br /><br />
+
+                    @*<div class="row">
+            <h3>Sample Data</h3>
+            <div class="col-4">
+                @foreach (var x in Model.Samples)
+
+                {
+                    //See the MyMovieSummary file for the partial view
+                    <partial name="SampleSummary" model="x" />
+                }
+
+
+            </div>
+            <div class="col-4">
+                <h3>Cluster Data</h3>
+                @foreach (var x in Model.Cluster)
+                {
+                    //See the MyMovieSummary file for the partial view
+                    <partial name="ClusterSummary" model="x" />
+                }
+
+
+
+            </div>
+            <div class="col-4">
+                <h3>Cranium Data</h3>
+
+                @foreach (var x in Model.CraniumSample)
+                {
+                    //See the MyMovieSummary file for the partial view
+                    <partial name="CraniumSummary" model="x" />
+                }
+
+            </div>
+        </div>*@
+
+                    @*<div class="row">
+                        <h3>Quadrant Data</h3>
+                        <div class="col-4">
+                            @foreach (var x in Model.Quadrants)
+
+                            {
+                                //See the MyMovieSummary file for the partial view
+                                <partial name="QuadrantSummary" model="x" />
+                            }
+
+
+                        </div>
+                        <div class="col-4">
+                            <h3>Square Data</h3>
+                            @foreach (var x in Model.Square)
+                            {
+                                //See the MyMovieSummary file for the partial view
+                                <partial name="SquareSummary" model="x" />
+                            }
+
+
+
+                        </div>
+                        <div class="col-4">
+                            <h3>C14 Data</h3>
+
+                            @foreach (var x in Model.C14Sample)
+                            {
+                                //See the MyMovieSummary file for the partial view
+                                <partial name="C14Summary" model="x" />
+                            }
+
+                        </div>
+                    </div>
+
+
+                </div>*@
 
 
 

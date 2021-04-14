@@ -28,11 +28,13 @@ namespace IntexFinalMummy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //NOTE TO TA: IF YOU TRY TO DEBUG FROM THE FILE IT WILL NOT WORK BECAUSE OF SECRETS MANAGMENT
+            //We have put the connection string on AWS if you need the connection string feel free to reach out
+            //Teams
             string endpointAuth = Environment.GetEnvironmentVariable("endpointAuth1");
             string endpointMain = Environment.GetEnvironmentVariable("endpointMain1");
 
-
+            //bRING IN THE dBS
             services.AddDbContext<ApplicationDbContext>(options =>
                  options.UseSqlServer(
                      Configuration.GetConnectionString("DefaultConnection") + endpointAuth));
@@ -46,7 +48,7 @@ namespace IntexFinalMummy
             services.AddDbContext<IntexMummyVaultContext>(options =>
               options.UseSqlServer(
                   Configuration.GetConnectionString("MummyConnection") + endpointMain));
-
+            //dEFINE SPECIAL USER POLICIES
             services.AddAuthorization(options => {
                 options.AddPolicy("User/Admin",
                     builder => builder.RequireRole("Admin", "User"));
@@ -77,7 +79,7 @@ namespace IntexFinalMummy
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            //Endpoint magic
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

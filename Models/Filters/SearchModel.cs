@@ -7,6 +7,7 @@ namespace IntexFinalMummy.Models.Filters
 {
     public class SearchModel
     {
+        //This is what I am going to use for the search filtering
         public string Gender { get; set; }
         public int? MinAge { get; set; }
         public int? MaxAge { get; set; }

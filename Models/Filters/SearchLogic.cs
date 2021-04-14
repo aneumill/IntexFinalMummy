@@ -16,7 +16,7 @@ namespace IntexFinalMummy.Models.Filters
 
         public IQueryable<MummyInfo> GetRecords(SearchModel searchModel)
             {
-
+            //The search Filters....
                 var result = _context.MummyInfos.AsQueryable();
                 if (searchModel != null)
                 {

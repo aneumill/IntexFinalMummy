@@ -3,6 +3,7 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+    <!--If Statement to determine what to display for logging in-->
     @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
     {
         <li class="dropdown nav-item">
@@ -24,6 +25,7 @@
         </li>
     }
 
+    <!--If the user is signed in but is not an admin then execute this for the login part of the navbar-->
     else if (SignInManager.IsSignedIn(User) && User.IsInRole("User"))
     {
         <li class="dropdown nav-item">
@@ -43,6 +45,7 @@
         </li>
 
     }
+    <!--If the user is signed in but is unassigned then show this-->
     else if (SignInManager.IsSignedIn(User) && User.IsInRole("Unassigned"))
     {
         <li class="dropdown nav-item">
@@ -61,7 +64,7 @@
         </li>
 
     }
-
+    <!--Show this for everyone else-->
     else
     {
         <li class="dropdown nav-item">

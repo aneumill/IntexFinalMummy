@@ -8,6 +8,7 @@ namespace IntexFinalMummy.Models.ViewModels
 {
     public class IndexViewModel
     {
+        //Index View Model that brings in all the tables I need
         public IEnumerable<MummyInfo> MummyInfos { get; set; }
 
         public IEnumerable<C14sample> C14Sample { get; set; }
@@ -19,7 +20,7 @@ namespace IntexFinalMummy.Models.ViewModels
 
         public IEnumerable<Quadrant> Quadrants { get; set; }
 
-
+//Paging/Enpoint information that I need
         public string InfoFromUrl { get; set; }
         public PageNumberingInfo PageNumberingInfo { get; set; }
         

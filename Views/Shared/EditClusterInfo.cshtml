@@ -4,11 +4,11 @@
 @{
 }
 @model IntexFinalMummy.Models.Cluster
+    <!--Divs that contain appropriate info to list form the Cluster table for editing purposes-->
+    <div>
 
-<div>
+        <label asp-for="ClusterNum">Cluster Number</label> <br />
 
-    <label asp-for="ClusterNum">Cluster Number</label> <br />
+        <input asp-for="ClusterNum" />
 
-    <input asp-for="ClusterNum" />
-
-</div>
+    </div>

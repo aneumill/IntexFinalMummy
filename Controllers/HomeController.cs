@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using IntexFinalMummy.Models.ViewModels;
 using IntexFinalMummy.Models.Filters;
 using Microsoft.AspNetCore.Authorization;
-
+//Main Controller for the Home Folder
 namespace IntexFinalMummy.Controllers
 {
     public class HomeController : Controller
@@ -17,9 +17,9 @@ namespace IntexFinalMummy.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private IntexMummyVaultContext _context { get; set; }
-
+//Set the pagination page size
         private int pageSize = 25;
-
+        //Bring in the tables 
         public MummyInfo mummyInfoEmpty;
         public Sample mummySampleDataEmpty;
         public Quadrant mummyQuadrantDataEmpty;
@@ -39,6 +39,7 @@ namespace IntexFinalMummy.Controllers
             return View();
         }
 
+//
         [HttpGet]
         [Authorize(Policy = "User/Admin")]
         public IActionResult AddRecord()
@@ -46,26 +47,28 @@ namespace IntexFinalMummy.Controllers
             return View();
         }
 
+        //Kids Bop View Action
         public IActionResult KidsBop()
         {
             return View();
         }
-
+//Data Descriptors Actions
         public IActionResult DataDescriptors()
         {
             return View();
         }
-
+        //Add Record Action only accesible by Users/Admin
         [HttpPost]
         [Authorize(Policy="User/Admin")]
         public IActionResult AddRecord(MummyInfo newRecord)
         {
+            //HardCoded Solution to an error I had for a internal DB contraint. If no QuadrantIs specificed it uses this
             if (newRecord.QuadrantId == null)
             {
                 newRecord.QuadrantId = 123;
             }
 
-
+            //If Model is valid then update the database
             if (ModelState.IsValid == true)
             {
                 _context.MummyInfos.Add(newRecord);
@@ -79,13 +82,14 @@ namespace IntexFinalMummy.Controllers
             }
 
         }
-        
+        //Delete Record Action only allowed by the Admin
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult DeleteRecord(MummyInfo passedMummyID)
         {
             IQueryable<MummyInfo> removingRecord = _context.MummyInfos.Where(p => p.MummyId == passedMummyID.MummyId);
 
+            //Delete 
             //loop to remove the record in the database
             foreach (var x in removingRecord)
             {
@@ -130,6 +134,7 @@ namespace IntexFinalMummy.Controllers
             });
 
         }
+        //Get Record for the Individual Record
         [HttpGet]
         public IActionResult ViewIndividualRecord(long MummyID, long QuadrantID, long ClusterID)
         {
@@ -160,7 +165,7 @@ namespace IntexFinalMummy.Controllers
 
 
 
-
+            //Makes these queryable
             foreach (var x in queryableMummyInfo)
             {
                 mummyInfoData = x;
@@ -200,19 +205,7 @@ namespace IntexFinalMummy.Controllers
 
             return View(new EditRecordViewModel
             {
-                // MummyInfos = mummyInfoData
-                // Samples = _context.Samples
-                // .Where(x => x.MummyId == MummyID),
-                // Quadrants = _context.Quadrants
-                // .Where(x => x.QuadrantId == QuadrantID),
-                // Cluster = _context.Clusters
-                // .Where(x => x.ClusterId == ClusterID),
-                // C14Sample = _context.C14samples
-                // .Where(x => x.MummyId == MummyID),
-                // CraniumSample = _context.CraniumSamples
-                // .Where(x => x.MummyId == MummyID),
-                // Square = _context.Squares
-                //.Where(x => x.SquareId == compareId)
+              
 
                 MummyInfos = mummyInfoData,
                 Samples = mummySampleData,
@@ -325,12 +318,12 @@ namespace IntexFinalMummy.Controllers
             });
         }
 
-     
+        //Action to submit changes of the desired record to the database
         [HttpPost]
         [Authorize(Policy = "User/Admin")]
         public IActionResult EditRecord(EditRecordViewModel formsubmission)
         {
-
+            //Make the Edit Record Model quys queryable 
             int? compareId = 0;
             IQueryable<Quadrant> queryable = _context.Quadrants.Where(x => x.QuadrantId == formsubmission.Quadrants.QuadrantId);
             IQueryable<MummyInfo> queryableMummyInfo = _context.MummyInfos.Where(x => x.MummyId == formsubmission.MummyInfos.MummyId);
@@ -340,14 +333,14 @@ namespace IntexFinalMummy.Controllers
             IQueryable<CraniumSample> queryableCranium = _context.CraniumSamples.Where(x => x.MummyId == formsubmission.CraniumSample.MummyId);
             IQueryable<C14sample> queryableC14 = _context.C14samples.Where(x => x.MummyId == formsubmission.CraniumSample.MummyId);
 
-
+            //Get the Square ID from out of the Quadrant
             foreach (var x in queryable)
             {
                 compareId = x.SquareId;
             }
 
             IQueryable<Square> queryableSquare = _context.Squares.Where(x => x.SquareId == compareId);
-
+            //Pull out the tamples 
             MummyInfo mummyInfoData = mummyInfoEmpty;
             Sample mummySampleData = mummySampleDataEmpty;
             Quadrant mummyQuadrantData = mummyQuadrantDataEmpty;
@@ -361,6 +354,7 @@ namespace IntexFinalMummy.Controllers
 
             foreach (var x in queryableMummyInfo)
             {
+                //Update the MummyInfo Table
                 x.MummyId = formsubmission.MummyInfos.MummyId;
                 x.AdultChild = formsubmission.MummyInfos.AdultChild;
                 x.QuadrantId = formsubmission.MummyInfos.QuadrantId;
@@ -446,11 +440,10 @@ namespace IntexFinalMummy.Controllers
                 x.OsteologyNotes = formsubmission.MummyInfos.OsteologyNotes;
                
             }
-            _context.SaveChanges();
+            
 
             foreach (var x in queryableSamples)
             {
-                //x.SampleId = formsubmission.Samples.SampleId;
                 x.MummyId = formsubmission.Samples.MummyId;
                 x.SampleYear = formsubmission.Samples.SampleYear;
                 x.SampleNotes = formsubmission.Samples.SampleNotes;
@@ -524,7 +517,7 @@ namespace IntexFinalMummy.Controllers
             }
 
 
-            
+            _context.SaveChanges();
 
 
             return View("EditConfirmation", formsubmission.MummyInfos);

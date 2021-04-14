@@ -4,10 +4,11 @@
 @{
 }
 @model IntexFinalMummy.Models.Cluster
-<div>
-    <input asp-for="QuadrantId" type="hidden" value="QuadrantId" />
-    <label asp-for="ClusterNum">Cluster Number</label> <br />
+    <!--Divs that contain appropriate info to list form the Cluster table-->
+    <div>
+        <input asp-for="QuadrantId" type="hidden" value="QuadrantId" />
+        <label asp-for="ClusterNum">Cluster Number</label> <br />
 
-    <p>@Html.DisplayFor(model => model.ClusterNum)</p>
+        <p>@Html.DisplayFor(model => model.ClusterNum)</p>
 
-</div>
+    </div>

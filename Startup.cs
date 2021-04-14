@@ -28,9 +28,14 @@ namespace IntexFinalMummy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            string endpointAuth = Environment.GetEnvironmentVariable("endpointAuth1");
+            string endpointMain = Environment.GetEnvironmentVariable("endpointMain1");
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
                  options.UseSqlServer(
-                     Configuration.GetConnectionString("DefaultConnection")));
+                     Configuration.GetConnectionString("DefaultConnection") + endpointAuth));
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                  .AddDefaultUI()
                  .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -40,7 +45,7 @@ namespace IntexFinalMummy
 
             services.AddDbContext<IntexMummyVaultContext>(options =>
               options.UseSqlServer(
-                  Configuration.GetConnectionString("MummyConnection")));
+                  Configuration.GetConnectionString("MummyConnection") + endpointMain));
 
             services.AddAuthorization(options => {
                 options.AddPolicy("User/Admin",

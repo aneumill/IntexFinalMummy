@@ -45,8 +45,13 @@ namespace IntexFinalMummy.Controllers
         {
             return View();
         }
-        
-     
+
+        public IActionResult KidsBop()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         [Authorize(Policy="User/Admin")]
         public IActionResult AddRecord(MummyInfo newRecord)

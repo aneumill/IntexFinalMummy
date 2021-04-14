@@ -1,25 +1,532 @@
-﻿
-<!--This is the index view-->
-<div class="">
-    <div class="py-5 bg-image-full" style="width: 100%; background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/All_Gizah_Pyramids.jpg');">
-        <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-        <h1 class="text-center text-light"> Welcome to Fag El Gamus!</h1>
-        <div style="height: 200px;"></div>
-    </div>
-    <section class="py-5">
-        <div class="container">
-            <h1>The Project</h1>
-            <p class="lead">Read all about it.</p>
-            <p>
-                Fag el-Gamous (which means Way of the Water Buffalo) is a large and important cemetery in Egypt that has been under archeological investigation (primarily by BYU researchers) for over 25 years. The excavation has garnered international attention because of the interesting insights gained by studying the Fag el-Gamous mummies. Detailed background information on this site can be found in the academic article “Rethinking burial dates at a Graeco-Roman Cemetery: Fag el-Gamous, Fayoum, Egypt.”
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
 
-                During multiple years of study, researchers have excavated more than 1,000 mummies and collected data in field notes, spreadsheets, and simple databases about each mummy’s location, physical orientation in the ground, burial depth, hair color, wrapping (including information about the textiles used), gender, age, bone (including skull and teeth) dimensions, items accompanying the mummy, and more. And, of course, there are many, many photographs. Offsite, researchers have performed a variety of analyses on the items excavated including carbon dating, DNA sequencing, and others.
-            </p>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Selecao Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Selecao - v4.1.0
+    * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center" @*style="background-image: url('file:///C:\Users\McKennaGraceTrussel\Source\Repos\IntexFinalMummy\wwwroot\sanddunes.jpg');"*@>
+        <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <br />
+                    <h2 class="animate__animated animate__fadeInDown" style="font-size: 60px;"> Welcome to Fag el-Gamous!</h2>
+                    <a class="btn-get-started animate__animated animate__fadeInUp scrollto" asp-action="ViewRecords">View Collection</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">About Us</h2>
+                    <p class="animate__animated animate__fadeInUp">Fag el-Gamous (which means Way of the Water Buffalo) is a large and important cemetery in Egypt that has been under archeological investigation (primarily by BYU researchers) for over 25 years. The excavation has garnered international attention because of the interesting insights gained by studying the Fag el-Gamous mummies</p>
+
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Our Research</h2>
+                    <p class="animate__animated animate__fadeInUp">
+                        During multiple years of study, researchers have excavated more than 1,000 mummies and collected data in field notes, spreadsheets, and simple databases about each mummy’s location, physical orientation in the ground, burial depth, hair color, wrapping (including information about the textiles used), gender, age, bone (including skull and teeth) dimensions, items accompanying the mummy, and more. And, of course, there are many, many photographs. Offsite, researchers have performed a variety of analyses on the items excavated including carbon dating, DNA sequencing, and others.
+                    </p>
+                    @*<a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>*@
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+            </a>
+
         </div>
-    </section>
-    <div class="py-5 bg-image-full" style="width: 100%; background-image: url('https://brill.com/view/book/edcoll/9789004416383/9789004416383_webready_content_m00006.jpg');">
-        <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-        <div style="height: 200px;"></div>
+
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+                <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255, 222, 173, .1)">
+            </g>
+            <g class="wave2">
+                <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255, 222, 173, .2)">
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+        </svg>
+
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>What We Collect</h2>
+                    <p>
+                        Our Goals:
+                    </p>
+                </div>
+
+                <div class="row content" data-aos="fade-up">
+                    <div class="col-lg-6">
+                        <p>
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="ri-check-double-line"></i>Organize the data and develop a website where this information can be shared with researchers and interested members of the public around the world.
+                            </li>
+                            <li>
+                                <i class="ri-check-double-line"></i>Allow the research team to view, filter, and query this data in many ways so they can answer a variety of academic research questions.
+                            </li>
+                            <li>
+                                <i class="ri-check-double-line"></i>Enable the research team to enter data while at the dig site. The site recently gained access to 3G cellular data speeds and the ability to enter field notes and other data directly to the database is desirable.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            As the quantity and diversity of data associated with this excavation has grown, a few challenges (and opportunities) have emerged.
+                        </p>
+                        <a href="#" class="btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+        <!-- End Features Section -->
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row" data-aos="zoom-out">
+                    <div class="col-lg-3 text-center text-lg-start">
+                        <h3>Hey Kids!</h3>
+                        <p>Wanny learn more about mummies? We've got you covered! Check out this page for games, videos, and MORE!</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" asp-action="KidsBop">Click here!</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Cta Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Portfolio</h2>
+                    <p>What We've Done</p>
+                </div>
+
+                @*<ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-card">Card</li>
+                        <li data-filter=".filter-web">Web</li>
+                    </ul>*@
+
+                <div class="row portfolio-container" data-aos="fade-up">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/bod.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Mummy</h4>
+                            <p>One of our many mummies excavated in the project. This mummy was well-preserved..</p>
+                            <a href="~/assets/img/Images/bod.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/cat.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Landscape</h4>
+                            <p>Egypt is full of ancient landmarkss.</p>
+                            <a href="~assets\img\Images\cat.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/DSCN0004 (1).JPG" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Landscape</h4>
+                            <p>Beautiful views from the excavation site</p>
+                            <a href="~/assets/img/Images/DSCN0004 (1).JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/DSCN0314 (1).jpg" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Camplife</h4>
+                            <p>A little more from our camp!</p>
+                            <a href="~/assets/img/Images/DSCN0314 (1).jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/pyramid.jpeg" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Pyramid</h4>
+                            <p>These are the most beautiful features of the beautiful land of Egypt.</p>
+                            <a href="~/assets/img/Images/pyramid.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/DSCN0316.JPG" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Landmarks</h4>
+                            <p>How cool!</p>
+                            <a href="~/assets/img/Images/DSCN0316.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/DSCN1000 (1).jpg" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Landmarks</h4>
+                            <p>More of the interesting creationsfrom ancient Egypt!</p>
+                            <a href="~/assets/img/Images/DSCN1000 (1).jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img">
+                            <img src="~/assets/img/Images/team.JPG" class="img-fluid" alt="" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Our Team</h4>
+                            <p>We are so lucky for every single member of our wonderful team!</p>
+                            <a href="~/assets/img/Images/team.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>The People Behind the Mummy</h2>
+                    <p>Meet Our Team</p>
+                </div>
+
+                <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Kerry has worked years on this project- and has made great contributions to the progress!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/kerry.jpg" class="testimonial-img" alt="" />
+                                <h3>Kerry Muhlestein</h3>
+                                <h4>Associate Professor of Ancient Scripture at BYU</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Dr. Evans has been monumental in any progress made, it has been great working with him!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/rpaulevans (1).jpg" class="testimonial-img" alt="">
+                                <h3>R. Paul Evans</h3>
+                                <h4>Co-Project Manager</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Krystal is such a hardworker!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/krystalpierce(2).jpg" class="testimonial-img" alt="">
+                                <h3>Krystal Pierce</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Joyce Smith is a great team player who helps keep everyone focused and happy.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/joycesmith (3).jpg" class="testimonial-img" alt="">
+                                <h3>Joyce Smith</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    I have loved working alongside John, he is a great addition to the team!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/johngee (1).jpg" class="testimonial-img" alt="">
+                                <h3>John Gee</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    If you need something to get done soon and get done well, Giovani is your guy!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+
+                                <img src="~/assets/img/People/giovannitata (1).jpg" class="testimonial-img" alt="">
+                                <h3>Giovani Itata</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Whenever I had a problem, I would go to George for help and he was always willing!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+
+                                <img src="~/assets/img/People/georgepierce (1).jpg" class="testimonial-img" alt="">
+                                <h3>George Pierce</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Deb is one of the kindest, smartest people you will ever meet!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/debharris (1).jpg" class="testimonial-img" alt="">
+                                <h3>Deb H. Harris</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Brian is so much fun, but also hardworking. He will get any task done well with a smile on his face!
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+
+                                <img src="~/assets/img/People/brianchristensen (3).jpg" class="testimonial-img" alt="">
+                                <h3>Brian Christensen</h3>
+                                <h4>Project Team Member</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Contact</h2>
+                    <p>Contact Us</p>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>800 N 580 E St, Provo, UT 84606</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>EgyptExcavProj@byu.edu</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            @*<div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>*@
+                            <a href="#" class="btn-get-started animate__animated animate__fadeInUp scrollto">Submit</a>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+<!--This is the index view-->
+<!--<div class="">
+    <div class="py-5 bg-image-full" style="width: 100%; background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/All_Gizah_Pyramids.jpg');">-->
+<!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+<!--<h1 class="text-center text-light"> Welcome to Fag El Gamus!</h1>
+    <div style="height: 200px;"></div>
+</div>
+<section class="py-5">
+    <div class="container">
+        <h1>The Project</h1>
+        <p class="lead">Read all about it.</p>
+        <p>
+            Fag el-Gamous (which means Way of the Water Buffalo) is a large and important cemetery in Egypt that has been under archeological investigation (primarily by BYU researchers) for over 25 years. The excavation has garnered international attention because of the interesting insights gained by studying the Fag el-Gamous mummies. Detailed background information on this site can be found in the academic article “Rethinking burial dates at a Graeco-Roman Cemetery: Fag el-Gamous, Fayoum, Egypt.”
+
+            During multiple years of study, researchers have excavated more than 1,000 mummies and collected data in field notes, spreadsheets, and simple databases about each mummy’s location, physical orientation in the ground, burial depth, hair color, wrapping (including information about the textiles used), gender, age, bone (including skull and teeth) dimensions, items accompanying the mummy, and more. And, of course, there are many, many photographs. Offsite, researchers have performed a variety of analyses on the items excavated including carbon dating, DNA sequencing, and others.
+        </p>
+    </div>
+</section>
+<div class="py-5 bg-image-full" style="width: 100%; background-image: url('https://brill.com/view/book/edcoll/9789004416383/9789004416383_webready_content_m00006.jpg');">-->
+<!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+<!--<div style="height: 200px;"></div>
     </div>
     <section class="py-5 bg-transparent">
         <div class="container ">
@@ -32,4 +539,4 @@
             </p>
         </div>
     </section>
-</div>
+</div>-->

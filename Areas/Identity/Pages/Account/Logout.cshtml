@@ -3,8 +3,9 @@
 @{
     ViewData["Title"] = "Log out";
 }
-
-<header>
+<br /><br />
+<<div class="container">
+    header>
     <h1>@ViewData["Title"]</h1>
     @{
         if (User.Identity.IsAuthenticated)
@@ -18,4 +19,5 @@
             <p>You have successfully logged out of the application.</p>
         }
     }
-</header>
+    </header>
+</div>

@@ -3,142 +3,156 @@
 *@
 @{
 }
-<div class="table100 ver5" style="padding-top: 5px">
-    <div class="table100-body js-pscroll ps ps--active-y">
-        <table>
-            <thead class="table100-head">
-                <tr>
-
-                    <th class="cell100 column15">Name</th>
-                    <th class="cell100 column16">Description</th>
-
-                </tr>
-                <br />
-                <br />
-                <br />
-            </thead>
-            <tbody class="row100 head">
-
-                <tr>
-
-                    <td class="cell100 column15">BurialNumber</td>
-                    <td class="cell100 column16">
-                        In each area, the burials are numbered in the order of excavation
-                    </td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">AdultChild</td>
-                    <td class="cell100 column16">Single character to approximate the age of the burial.  A - adult; C - child.  ARC GIS sizes the 3D image for the burial dependent on this character.</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">Sex</td>
-                    <td class="cell100 column16">
-                        M - male; F - female; S - subadult.  Sex idenfication is based on osteological analysis which is indeterminate until puberty/adulthood.  Please convert all to upper case
-                    </td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">SexMethod</td>
-                    <td class="cell100 column16">
-                        Osteological analysis used to determine sex.  skul - Skull; pelv - Pelvis  Please convert all to lower case.
-                    </td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">MinAge</td>
-                    <td class="cell100 column16">A determination of the age at death; unless otherwise noted, the age is in years.</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">MaxAge</td>
-                    <td class="cell100 column16">A determination of the age at death; unless otherwise noted, the age is in years.</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">HairColor</td>
-                    <td class="cell100 column16">Color of burial hair.  Black, Brown, Blond, Br-red - Brownish Red (auburn), Red, drkbrn - Dark Brown, ltbrwn - Light Brown, br-red - Brownish red.   Please consider how the information in this column could be uniformly reported</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">Sample</td>
-                    <td class="cell100 column16">Y - Yes or N - No;  Was a biological sample collected</td>
-                </tr>
-
-                <tr>
-
-                    <td class="cell100 column15">BurialDepth</td>
-                    <td class="cell100 column16">The distance (meters) from the surface down to the burial</td>
-                </tr>
-
-                <tr>
-
-                    <td class="cell100 column15">SouthToHead</td>
-                    <td class="cell100 column16">The distance (meters) from the south edge of the area to the head of the burial</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">SouthToFeet</td>
-                    <td class="cell100 column16">The distance (meters) from the south edge of the area to the feet of the burial</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">WestToHead</td>
-                    <td class="cell100 column16">The distance (meters) from the west edge of the area to the head of the burial</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">WestToFeet</td>
-                    <td class="cell100 column16">The distance (meters) from the west edge of the area to the feet of the burial</td>
-                </tr>
-                <tr>
-
-                    <td class="cell100 column15">HeadDirection</td>
-                    <td class="cell100 column16">Head is buried to the East or the West</td>
-                </tr>
-
-                <tr>
-                    <td class="cell100 column15">Maximum Cranial Length</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Maximum Cranial Breadth</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Basion-Bregma Height</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Basion-Nasion</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Basion-Prosthion Length</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Bizygomatic Diameter</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Nasion-Prosthion</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Maximum Nasal Breadth</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-                <tr>
-                    <td class="cell100 column15">Interorbital Breadth</td>
-                    <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
-                </tr>
-
-            </tbody>
-
-
-        </table>
+<link href="~/Table_Fixed_Header/css/main.css" rel="stylesheet" />
+<link href="~/Table_Fixed_Header/css/util.css" rel="stylesheet" />
+<br /><br /></br>
+<div class="container text-center"><div class="container text-center">
+    <div>
+        <h1 class="section-title">Learn About the Data Types</h1>
     </div>
-    <br />
+    <div>
+        <div class="table100 ver5" style="padding-top: 5px">
+            <div class="table100-body js-pscroll ps ps--active-y">
+                <table>
+                    <thead class="table100-head">
+                        <tr>
+
+                            <th class="cell100 column15">Name</th>
+                            <th class="cell100 column16">Description</th>
+
+                        </tr>
+                        <br />
+                        <br />
+                        <br />
+                    </thead>
+                    <tbody class="row100 head">
+
+                        <tr>
+
+                            <td class="cell100 column15">BurialNumber</td>
+                            <td class="cell100 column16">
+                                In each area, the burials are numbered in the order of excavation
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">AdultChild</td>
+                            <td class="cell100 column16">Single character to approximate the age of the burial.  A - adult; C - child.  ARC GIS sizes the 3D image for the burial dependent on this character.</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">Sex</td>
+                            <td class="cell100 column16">
+                                M - male; F - female; S - subadult.  Sex idenfication is based on osteological analysis which is indeterminate until puberty/adulthood.  Please convert all to upper case
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">SexMethod</td>
+                            <td class="cell100 column16">
+                                Osteological analysis used to determine sex.  skul - Skull; pelv - Pelvis  Please convert all to lower case.
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">MinAge</td>
+                            <td class="cell100 column16">A determination of the age at death; unless otherwise noted, the age is in years.</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">MaxAge</td>
+                            <td class="cell100 column16">A determination of the age at death; unless otherwise noted, the age is in years.</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">HairColor</td>
+                            <td class="cell100 column16">Color of burial hair.  Black, Brown, Blond, Br-red - Brownish Red (auburn), Red, drkbrn - Dark Brown, ltbrwn - Light Brown, br-red - Brownish red.   Please consider how the information in this column could be uniformly reported</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">Sample</td>
+                            <td class="cell100 column16">Y - Yes or N - No;  Was a biological sample collected</td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="cell100 column15">BurialDepth</td>
+                            <td class="cell100 column16">The distance (meters) from the surface down to the burial</td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="cell100 column15">SouthToHead</td>
+                            <td class="cell100 column16">The distance (meters) from the south edge of the area to the head of the burial</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">SouthToFeet</td>
+                            <td class="cell100 column16">The distance (meters) from the south edge of the area to the feet of the burial</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">WestToHead</td>
+                            <td class="cell100 column16">The distance (meters) from the west edge of the area to the head of the burial</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">WestToFeet</td>
+                            <td class="cell100 column16">The distance (meters) from the west edge of the area to the feet of the burial</td>
+                        </tr>
+                        <tr>
+
+                            <td class="cell100 column15">HeadDirection</td>
+                            <td class="cell100 column16">Head is buried to the East or the West</td>
+                        </tr>
+
+                        <tr>
+                            <td class="cell100 column15">Maximum Cranial Length</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Maximum Cranial Breadth</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Basion-Bregma Height</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Basion-Nasion</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Basion-Prosthion Length</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Bizygomatic Diameter</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Nasion-Prosthion</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Maximum Nasal Breadth</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+                        <tr>
+                            <td class="cell100 column15">Interorbital Breadth</td>
+                            <td class="cell100 column16">Osteologican Descriptor.  Measurement in centimeters</td>
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+            </div>
+            <br />
+        </div>
+    </div>
 </div>
+</div>
+
+
+

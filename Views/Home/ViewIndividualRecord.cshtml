@@ -6,119 +6,134 @@
 
 @model IntexFinalMummy.Models.ViewModels.EditRecordViewModel
 
-<br /><br /><br />
+<br />
+<br />
+<br />
 
 
-            <div class="text-center">
-               
-                    <partial name="TitleSummary" model="Model.MummyInfos" />
-               
-            </div>
-            <div class="justify-content-center">
-                <partial name="EditRecordButtonSummary" model="Model.MummyInfos" />
-            </div>
-      
+<div class="text-center">
 
-                <div class="row justify-content-center text-dark  font-weight-bold card-columns">
-                    <div class="col-3 ">
-                        <h3>Information About the Mummy</h3>
-                      
-                            <partial name="ViewIndividualRecordSummary1" model="Model.MummyInfos" />
-                        
+    <partial name="TitleSummary" model="Model.MummyInfos" />
 
+</div>
+@if (User.IsInRole("Admin") || User.IsInRole("User"))
+{
 
+<div class="container">
+    <partial name="EditRecordButtonSummary" model="Model.MummyInfos" />
+</div>
 
-                    </div>
-                    <div class="col-3">
-                        
-                            <partial name="ViewIndividualRecordSummary2" model="Model.MummyInfos" />
-                        
+}
 
+<div class="container text-center justify-content-center">
+    
+    <h3 class="text-center">General Information About the Mummy</h3>
 
-                    </div>
-                    <div class="col-3 ">
-                        
-                        
-                          
-                            <partial name="ViewIndividualRecordSummary3" model="Model.MummyInfos" />
-                        
+</div>
+<br />
+<br />
+
+<div class="row justify-content-center text-dark font-weight-bold">
+    <div class="col-3 ">
 
 
-                    </div>
-                </div>
+        <partial name="ViewIndividualRecordSummary1" model="Model.MummyInfos" />
 
 
 
-                <div class="row justify-content-center text-dark  font-weight-bold">
-                    <div class="col-3">
-                        <h3>Sample Data</h3>
-                        
-                    
-                            <partial name="SampleSummary" model="Model.Samples" />
-                        
 
+    </div>
+    <div class="col-3">
 
-                    </div>
-                  
-                        <div class="col-3">
-                            <h3>Cluster Data</h3>
-                            
-                                
-                                <partial name="ClusterSummary" model="Model.Cluster" />
-                            
+        <partial name="ViewIndividualRecordSummary2" model="Model.MummyInfos" />
 
 
 
-                        </div>
-                        <div class="col-3">
-                            <h3>Cranium Data</h3>
-
-                            
-                              
-                                <partial name="CraniumSummary" model="Model.CraniumSample" />
-                            
-
-                        </div>
-                    </div>
-       
-
-                <div class="row justify-content-lg-center text-dark font-weight-bold">
-                   
-                       
-                        <div class="col-3">
-                             <h3>Quadrant Data</h3>
-                            
-                          
-                                <partial name="QuadrantSummary" model="Model.Quadrants" />
-                            
+    </div>
+    <div class="col-3 ">
 
 
-                        </div >
-                        <div class="col-3">
-                            <h3>Square Data</h3>
-                            
-                                
-                                <partial name="SquareSummary" model="Model.Square" />
-                            
-                        </div>
 
-                                                        
-                        <div class="col-3">
-                            <h3>C14 Data</h3>
+        <partial name="ViewIndividualRecordSummary3" model="Model.MummyInfos" />
 
-                        
-                                <partial name="C14Summary" model="Model.C14Sample" />
-                            
 
-                        </div>
-                        
-                    
-                </div>
-          
-            
-                <br /><br />
 
-         
+    </div>
+</div>
+
+
+
+<div class="row justify-content-center text-dark  font-weight-bold">
+    <div class="col-3">
+        <h3>Sample Data</h3>
+
+
+        <partial name="SampleSummary" model="Model.Samples" />
+
+
+
+    </div>
+
+    <div class="col-3">
+        <h3>Cluster Data</h3>
+
+
+        <partial name="ClusterSummary" model="Model.Cluster" />
+
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Cranium Data</h3>
+
+
+
+        <partial name="CraniumSummary" model="Model.CraniumSample" />
+
+
+    </div>
+</div>
+
+
+<div class="row justify-content-lg-center text-dark font-weight-bold">
+
+
+    <div class="col-3">
+        <h3>Quadrant Data</h3>
+
+
+        <partial name="QuadrantSummary" model="Model.Quadrants" />
+
+
+
+    </div>
+    <div class="col-3">
+        <h3>Square Data</h3>
+
+
+        <partial name="SquareSummary" model="Model.Square" />
+
+    </div>
+
+
+    <div class="col-3">
+        <h3>C14 Data</h3>
+
+
+        <partial name="C14Summary" model="Model.C14Sample" />
+
+
+    </div>
+
+
+</div>
+
+
+<br />
+<br />
+
+
 
 
 

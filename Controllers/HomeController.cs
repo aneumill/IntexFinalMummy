@@ -51,6 +51,10 @@ namespace IntexFinalMummy.Controllers
             return View();
         }
 
+        public IActionResult DataDescriptors()
+        {
+            return View();
+        }
 
         [HttpPost]
         [Authorize(Policy="User/Admin")]

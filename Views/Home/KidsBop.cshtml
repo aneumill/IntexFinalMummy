@@ -34,31 +34,32 @@
 
         <script id="cs-typekit-loader">
             (function(doc){
-            var config = {kitId:'dbf1tqu', async:true }
+                var config = {kitId:'dbf1tqu', async:true }
 
-            var timer = setTimeout(function(){
+                var timer = setTimeout(function(){
                 doc.documentElement.className = doc.documentElement.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-            }, 3000)
+                }, 3000)
 
-            var tk = doc.createElement("script")
-            var loaded = false
-            var firstScript = doc.getElementsByTagName("script")[0]
+                var tk = doc.createElement("script")
+                var loaded = false
+                var firstScript = doc.getElementsByTagName("script")[0]
 
-            doc.documentElement.className += " wf-loading"
+                doc.documentElement.className += " wf-loading"
 
-            tk.src = 'https://use.typekit.net/' + config.kitId + '.js'
-            tk.async = true
-            tk.onload = tk.onreadystatechange = function(){
-              if (loaded || this.readyState && this.readyState != "complete" && this.readyState != "loaded") return
-              loaded = true
-              clearTimeout(timer)
-              try {Typekit.load(config)} catch(e){ }
-            }
+                tk.src = 'https://use.typekit.net/' + config.kitId + '.js'
+                tk.async = true
+                tk.onload = tk.onreadystatechange = function(){
+                  if (loaded || this.readyState && this.readyState != "complete" && this.readyState != "loaded") return
+                  loaded = true
+                  clearTimeout(timer)
+                  try {Typekit.load(config)} catch(e){ }
+                }
 
-            firstScript.parentNode.insertBefore(tk, firstScript)
-          })(window.document)
+                firstScript.parentNode.insertBefore(tk, firstScript)
+              })(window.document)
     </script>
     <link rel="stylesheet" href="https://kidzbop.com/wp-content/plugins/LayerSlider/assets/static/layerslider/skins/v6/skin.css" type="text/css">
+    <link href="~/css/KidsBopStyle.css" rel="stylesheet" />
 </head>
 
 <body class="home page-template page-template-template-blank-4 page-template-template-blank-4-php page page-id-894 x-integrity x-integrity-light x-full-width-layout-active x-full-width-active x-post-meta-disabled x-child-theme-active pro-v3_2_3 cornerstone-v4_2_3">
@@ -89,9 +90,6 @@
 
 
 
-                    <a class="e3804-7 x-image" href="/">
-                        <img alt="Image" src="https://kidzbop.com/wp-content/uploads/2020/04/kidzbop-weblogo-cc-1200.png" width="750" height="129">
-                    </a>
 
                     <a class="e3804-8 x-anchor x-anchor-toggle" tabindex="0" data-x-toggle="1" data-x-toggleable="e3804-8">
 
@@ -167,6 +165,7 @@
                                             <div class="x-anchor-content">
                                                 <div class="x-anchor-text"><span class="x-anchor-text-primary">MUMMY FACTS</span></div>
                                             </div>
+                                            
                                         </a>
                                     </div>
                                 </div>

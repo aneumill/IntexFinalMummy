@@ -17,7 +17,7 @@
         </div>
 
 
-        <div>
+        <div style="border:solid; border-color: dimgrey; padding: 7px">
             <form method="get" class="d-md-inline-block align-items-xxl-end">
                 <partial name="FilterSummary" model="Model.SearchModel" />
             </form>
@@ -43,7 +43,7 @@
                                 <th class="cell100 column7">Burial Goods</th>
                                 <th class="cell100 column8">Burial Description</th>
                                
-                            <th class="cell100 column9">View Record</th>}
+                            <th class="cell100 column9">View Record</th>
                                 
                                 @if (User.IsInRole("Admin"))
                                 {
